@@ -9,8 +9,8 @@ export default {
       gray: "#4b5563",
     },
     fontFamily: {
-      sans: ["Graphik", "sans-serif"],
-      serif: ["Merriweather", "serif"],
+      lato: ["Lato", "sans-serif"],
+      playfairDisplay: ["Playfair-Display", "serif"],
     },
     extend: {},
   },
