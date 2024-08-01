@@ -1,11 +1,11 @@
 ---
-
+import { type Navtypes, navlogos } from "../consts.ts";
 ---
 
-<header class="relative bg-white dark:bg-blue">
+<header class="relative bg-white shadow-lg">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="flex justify-between items-center py-4">
-      <div class="flex">JJB</div><div class="flex items-center justify-end">logos nav</div>
+      <div class="flex">JJB</div><div class="flex items-center justify-end gap-4">{navlogos.map((nav: Navtypes) => <h1>{nav.url}</h1>)}</div>
     </div>
   </div>
 </header>
