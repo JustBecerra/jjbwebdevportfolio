@@ -1,7 +1,7 @@
 import type { IconType } from "react-icons";
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaRegSun, FaMoon } from "react-icons/fa";
 
 export type Navtypes = {
   url: string;
@@ -17,5 +17,10 @@ export const navlogos: Navtypes[] = [
     url: "about",
     logo: "About",
   },
-  { url: "blog", logo: "Blog" },
+  { url: "projects", logo: "Projects" },
+];
+
+export const functionLogos = [
+  { initial: FaRegSun, change: FaMoon },
+  { initial: "ES", change: "EN" },
 ];
