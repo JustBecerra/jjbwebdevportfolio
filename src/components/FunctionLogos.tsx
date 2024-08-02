@@ -3,6 +3,7 @@ import { FaRegSun, FaMoon } from "react-icons/fa";
 const FunctionLogos = () => {
   const [changeLanguage, setChangeLanguage] = useState(false);
   const [changeTheme, setChangeTheme] = useState(false);
+
   return (
     <>
       <button className="transparent" onClick={() => setChangeTheme((prev) => !prev)}>

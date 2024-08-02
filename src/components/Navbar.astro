@@ -9,9 +9,9 @@ import FunctionLogos from "./FunctionLogos";
       <div class="flex">JJB</div><div class="flex items-center justify-end gap-4">
         {
           navlogos.map((nav: Navtypes) => (
-            <button class="transparent">
+            <a href={nav.url} target="_blank" class="transparent">
               <nav.logo className="hover:text-green text-xl" />
-            </button>
+            </a>
           ))
         }
         <FunctionLogos client:load />
