@@ -1,12 +1,13 @@
 ---
-import { type Navtypes, navlogos, functionLogos } from "../consts.ts";
+import { type Navtypes, navlogos } from "../consts.ts";
+import FunctionLogos from "./FunctionLogos";
 ---
 
 <header class="relative bg-white shadow-lg">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div class="flex justify-between items-center py-4">
       <div class="flex">JJB</div><div class="flex items-center justify-end gap-4">
-        {functionLogos.map((logo) => <>{typeof logo.initial === "string" ? <h1>{logo.initial}</h1> : <logo.initial />}</>)}
+        <FunctionLogos client:load />
         {navlogos.map((nav: Navtypes) => <>{typeof nav.logo === "string" ? <h1>{nav.logo}</h1> : <nav.logo />}</>)}
       </div>
     </div>
