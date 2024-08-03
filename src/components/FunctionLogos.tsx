@@ -22,15 +22,19 @@ const FunctionLogos = () => {
   return (
     <>
       <button className="transparent" onClick={handleTheme}>
-        {changeTheme === "dark" ? <FaMoon className="hover:text-green text-xl" /> : <FaRegSun className="hover:text-green text-xl" />}
+        {changeTheme === "dark" ? (
+          <FaMoon className="hover:text-green text-gray dark:text-white text-xl" />
+        ) : (
+          <FaRegSun className="hover:text-green text-gray dark:text-white text-xl" />
+        )}
       </button>
       <button className="transparent" onClick={() => setChangeLanguage((prev) => !prev)}>
-        <h1 className="text-base w-[20px] font-bold font-playfairDisplay dark:text-white text-black hover:text-green">
+        <h1 className="text-base w-[20px] font-bold font-playfairDisplay text-gray dark:text-white hover:text-green">
           {changeLanguage ? "ES" : "EN"}
         </h1>
       </button>
-      <button className="transparent font-bold hover:text-green font-playfairDisplay">About</button>
-      <button className="transparent font-bold hover:text-green font-playfairDisplay">Projects</button>
+      <button className="transparent font-bold hover:text-green text-gray dark:text-white font-playfairDisplay">About</button>
+      <button className="transparent font-bold hover:text-green text-gray dark:text-white font-playfairDisplay">Projects</button>
     </>
   );
 };
