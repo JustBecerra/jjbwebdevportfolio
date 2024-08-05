@@ -14,5 +14,10 @@ export default {
     },
     extend: {},
   },
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en"],
+  },
   plugins: [],
+  darkMode: "class",
 };
