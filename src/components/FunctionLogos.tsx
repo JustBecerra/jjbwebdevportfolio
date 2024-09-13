@@ -20,7 +20,7 @@ const FunctionLogos = () => {
   }, [changeTheme]);
 
   return (
-    <>
+    <div className="flex gap-8">
       <button className="transparent" onClick={handleTheme}>
         {changeTheme === "dark" ? (
           <FaMoon className="hover:text-green dark:hover:text-green text-gray dark:text-white text-xl" />
@@ -37,7 +37,7 @@ const FunctionLogos = () => {
       <button className="transparent font-bold hover:text-green dark:hover:text-green text-gray dark:text-white font-playfairDisplay">
         Projects
       </button>
-    </>
+    </div>
   );
 };
 
