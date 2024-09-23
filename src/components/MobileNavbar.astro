@@ -1,0 +1,37 @@
+---
+import { FaHome } from "react-icons/fa";
+import { navlogos, type Navtypes } from "../consts";
+import FunctionLogos from "./FunctionLogos";
+---
+
+<div class="flex justify-between items-center py-4">
+  <a href="/" class="flex"><FaHome className="hover:text-green text-3xl text-gray dark:hover:text-green dark:text-white" /></a>
+  <div>
+    <button id="burger" class="block lg:hidden text-gray-600 focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+    <nav id="menu" class="hidden lg:flex flex-col lg:flex-row lg:ml-6 lg:space-x-4 lg:items-center">
+      {
+        navlogos.map((nav: Navtypes) => (
+          <a href={nav.url} target="_blank" class="transparent">
+            <nav.logo className="hover:text-green text-xl dark:hover:text-green text-gray dark:text-white" />
+          </a>
+        ))
+      }
+      <!-- <FunctionLogos /> -->
+    </nav>
+  </div>
+</div>
+
+<script>
+  const burgerButton = document.getElementById("burger");
+  const menu = document.getElementById("menu");
+
+  if (burgerButton && menu) {
+    burgerButton.addEventListener("click", function () {
+      menu.classList.toggle("hidden");
+    });
+  }
+</script>
