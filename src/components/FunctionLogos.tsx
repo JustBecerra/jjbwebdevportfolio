@@ -22,14 +22,14 @@ const FunctionLogos = () => {
   return (
     <div className="flex flex-col w-full lg:flex-row gap-8">
       <div className="flex items-center gap-4 justify-around">
-        <button className="transparent" onClick={handleTheme}>
+        <button onClick={handleTheme}>
           {changeTheme === "dark" ? (
             <FaMoon className="hover:text-green dark:hover:text-green text-gray dark:text-white text-3xl lg:text-xl" />
           ) : (
             <FaRegSun className="hover:text-green dark:hover:text-green text-gray dark:text-white text-3xl lg:text-xl" />
           )}
         </button>
-        <button className="transparent" onClick={() => setChangeLanguage((prev) => !prev)}>
+        <button onClick={() => setChangeLanguage((prev) => !prev)}>
           <h1 className="text-2xl lg:text-base w-[20px] dark:hover:text-green font-bold font-playfairDisplay text-gray dark:text-white hover:text-green">
             {changeLanguage ? "ES" : "EN"}
           </h1>
