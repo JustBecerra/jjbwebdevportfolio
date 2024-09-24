@@ -1,0 +1,20 @@
+---
+import { FaHome } from "react-icons/fa";
+import { navlogos, type Navtypes } from "../consts";
+import FunctionLogos from "./FunctionLogos";
+---
+
+<div class="flex justify-between items-center py-4">
+  <a href="/" class="flex"><FaHome className="hover:text-green text-3xl text-gray dark:hover:text-green dark:text-white" /></a><div
+    class="flex items-center justify-end gap-4"
+  >
+    {
+      navlogos.map((nav: Navtypes) => (
+        <a href={nav.url} target="_blank" class="transparent">
+          <nav.logo className="hover:text-green text-xl dark:hover:text-green text-gray dark:text-white" />
+        </a>
+      ))
+    }
+    <FunctionLogos client:load />
+  </div>
+</div>
