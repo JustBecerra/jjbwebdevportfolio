@@ -1,10 +1,19 @@
 import type { IconType } from "react-icons";
-import { FaLinkedin, FaWhatsapp } from "react-icons/fa6";
+import { FaLinkedin, FaWhatsapp, FaGolang } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaGitAlt } from "react-icons/fa";
+import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
+import { RiNextjsFill } from "react-icons/ri";
+import { SiRedux, SiVite, SiTailwindcss, SiExpress } from "react-icons/si";
+import { IoLogoReact, IoLogoNodejs, IoLogoJavascript, IoLogoHtml5, IoLogoCss3, IoLogoFigma } from "react-icons/io5";
 
 export type Navtypes = {
   url: string;
+  logo: IconType;
+};
+
+export type TechandToolsTypes = {
+  name: string;
   logo: IconType;
 };
 
@@ -26,5 +35,72 @@ export const scrollRoutes = [
   },
   {
     name: "Projects",
+  },
+];
+
+export const TechandToolsList: TechandToolsTypes[] = [
+  {
+    name: "React",
+    logo: IoLogoReact,
+  },
+  {
+    name: "Node",
+    logo: IoLogoNodejs,
+  },
+  {
+    name: "Javascript",
+    logo: IoLogoJavascript,
+  },
+  {
+    name: "Typescript",
+    logo: BiLogoTypescript,
+  },
+  {
+    name: "HTML",
+    logo: IoLogoHtml5,
+  },
+  {
+    name: "CSS",
+    logo: IoLogoCss3,
+  },
+  {
+    name: "Figma",
+    logo: IoLogoFigma,
+  },
+  {
+    name: "NextJs",
+    logo: RiNextjsFill,
+  },
+  {
+    name: "Git",
+    logo: FaGitAlt,
+  },
+  {
+    name: "Github",
+    logo: FaGithub,
+  },
+  {
+    name: "Redux",
+    logo: SiRedux,
+  },
+  {
+    name: "Golang",
+    logo: FaGolang,
+  },
+  {
+    name: "PostgreSQL",
+    logo: BiLogoPostgresql,
+  },
+  {
+    name: "Vite",
+    logo: SiVite,
+  },
+  {
+    name: "Tailwind",
+    logo: SiTailwindcss,
+  },
+  {
+    name: "Express",
+    logo: SiExpress,
   },
 ];

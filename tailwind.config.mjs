@@ -12,7 +12,17 @@ export default {
       lato: ["Lato", "sans-serif"],
       playfairDisplay: ["Playfair-Display", "serif"],
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        scroll: "scroll 15s linear infinite",
+      },
+    },
   },
   i18n: {
     defaultLocale: "es",
