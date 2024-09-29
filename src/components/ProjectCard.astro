@@ -1,28 +1,38 @@
 ---
+import type { IconType } from 'react-icons/lib';
 
+const { image, icon, name, type, description, listIcons, appLink, repoLink } =
+	Astro.props;
 ---
 
-<div class="w-[400px] h-[500px] rounded flex flex-col gap-8 bg-gray">
-	<div class="w-full h-2/5">
-		<img src="/quiztimeSH.png" />
+<div class="w-[400px] h-[600px] rounded flex flex-col gap-8 bg-gray">
+	<div class="w-full h-fit">
+		<img src={image} />
 	</div>
-	<div class="w-full px-4 flex flex-col">
+	<div class="w-full px-4 flex flex-col gap-4">
 		<div class="flex w-full gap-4">
-			<img src="/quiztimeicon.ico" />
+			<img src={icon} />
 			<div>
-				<h3 class="text-white">Project Type</h3>
-				<h2 class="text-green">Project Name</h2>
+				<h3 class="text-white">{type}</h3>
+				<h2 class="text-green">{name}</h2>
 			</div>
 		</div>
-		<p class="text-white">Project Description</p>
+		<p class="text-white ml-4">
+			{description}
+		</p>
 	</div>
 	<div class="flex flex-col items-center gap-4">
 		<h3 class="text-green">Technologies Used</h3>
-		<div>Icons of technologies</div>
+		<div class="flex text-4xl gap-4 text-green">
+			{listIcons.map((Icon: IconType) => <Icon />)}
+		</div>
 		<div class="mt-6 flex gap-8">
-			<a class="bg-green px-4 py-2 rounded-full text-white">Live Link</a>
-			<a class="bg-white px-4 py-2 rounded-full border-2 border-green"
-				>Repository</a
+			<a href={appLink} class="bg-green px-4 py-2 rounded-full text-white"
+				>Live Link</a
+			>
+			<a
+				href={repoLink}
+				class="bg-white px-4 py-2 rounded-full border-2 border-green">Code</a
 			>
 		</div>
 	</div>

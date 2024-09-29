@@ -38,6 +38,27 @@ export const scrollRoutes = [
   },
 ];
 
+export const ChallengeInfo = [
+  {
+    imageURL: '/quiztimeSH.png',
+    projectIcon: '/quiztimeicon.ico',
+    name: 'Fun Quiz Time!',
+    type: 'Quiz App',
+    description:
+      'App designed to put your history knowledge to the test. Most questions come from The Trivia API but you can also find user submitted questions. ',
+    listOfIcons: [
+      BiLogoTypescript,
+      SiTailwindcss,
+      IoLogoCss3,
+      IoLogoHtml5,
+      RiNextjsFill,
+      FaGolang,
+    ],
+    appLink: 'https://fun-quiz-time.vercel.app/',
+    repoLink: 'https://github.com/JustBecerra/QuizTime',
+  },
+];
+
 export const TechandToolsList: TechandToolsTypes[] = [
   {
     name: "React",

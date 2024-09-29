@@ -1,4 +1,5 @@
 ---
+import { ChallengeInfo } from '../consts';
 import ProjectCard from './ProjectCard.astro';
 ---
 
@@ -10,7 +11,20 @@ import ProjectCard from './ProjectCard.astro';
 			Featured Personal Projects
 		</h1>
 		<div>
-			<ProjectCard />
+			{
+				ChallengeInfo.map((info) => (
+					<ProjectCard
+						image={info.imageURL}
+						icon={info.projectIcon}
+						name={info.name}
+						type={info.type}
+						description={info.description}
+						listIcons={info.listOfIcons}
+						appLink={info.appLink}
+						repoLink={info.repoLink}
+					/>
+				))
+			}
 		</div>
 	</div>
 </div>
