@@ -40,12 +40,29 @@ export const scrollRoutes = [
 
 export const ChallengeInfo = [
   {
+    imageURL: '/caloriecounterSH.png',
+    projectIcon: '/caloriesIcon.png',
+    name: 'Calorie Counter',
+    type: 'Fitness App',
+    description:
+      'App designed to track calories and get your health in check. Helps with gaining and losing weight.',
+    listOfIcons: [
+      BiLogoTypescript,
+      IoLogoCss3,
+      IoLogoHtml5,
+      IoLogoReact,
+      SiVite,
+    ],
+    appLink: 'https://calorie-counter-justbecerra.vercel.app/',
+    repoLink: 'https://github.com/JustBecerra/calorie-counter',
+  },
+  {
     imageURL: '/quiztimeSH.png',
     projectIcon: '/quiztimeicon.ico',
     name: 'Fun Quiz Time!',
     type: 'Quiz App',
     description:
-      'App designed to put your history knowledge to the test. Most questions come from The Trivia API but you can also find user submitted questions. ',
+      'App designed to put your history knowledge to the test. Most questions come from The Trivia API but you can also find user submitted questions.',
     listOfIcons: [
       BiLogoTypescript,
       SiTailwindcss,
