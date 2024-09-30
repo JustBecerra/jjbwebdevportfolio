@@ -5,7 +5,9 @@ const { image, icon, name, type, description, listIcons, appLink, repoLink } =
 	Astro.props;
 ---
 
-<div class="w-[400px] h-[600px] rounded-md flex flex-col gap-8 bg-gray">
+<div
+	class="w-[400px] h-[600px] rounded-md flex flex-col gap-8 bg-gray hover:scale-110 transition ease-in-out delay-150"
+>
 	<div class="w-full h-fit">
 		<img src={image} class="rounded-t-md" />
 	</div>
