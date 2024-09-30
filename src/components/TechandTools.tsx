@@ -32,7 +32,7 @@ const TechListWrapper = () => {
 
   return (
     <div
-      className="hidden lg:flex flex-col items-center gap-8 w-full h-[400px]"
+      className="hidden lg:flex flex-col items-center gap-8 w-full h-[200px]"
       onMouseOver={() => setStop(true)}
       onMouseLeave={() => setStop(false)}
     >

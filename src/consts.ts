@@ -4,8 +4,21 @@ import { IoMdMail } from "react-icons/io";
 import { FaGithub, FaGitAlt } from "react-icons/fa";
 import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
 import { RiNextjsFill } from "react-icons/ri";
-import { SiRedux, SiVite, SiTailwindcss, SiExpress } from "react-icons/si";
-import { IoLogoReact, IoLogoNodejs, IoLogoJavascript, IoLogoHtml5, IoLogoCss3, IoLogoFigma } from "react-icons/io5";
+import {
+  SiRedux,
+  SiVite,
+  SiTailwindcss,
+  SiExpress,
+  SiAstro,
+} from 'react-icons/si';
+import {
+  IoLogoReact,
+  IoLogoNodejs,
+  IoLogoJavascript,
+  IoLogoHtml5,
+  IoLogoCss3,
+  IoLogoFigma,
+} from 'react-icons/io5';
 
 export type Navtypes = {
   url: string;
@@ -18,23 +31,46 @@ export type TechandToolsTypes = {
 };
 
 const message = "Hello, I'd like to talk to you!";
-const phoneNumber = "+542215909321";
+const phoneNumber = '+542215909321';
 const encodedMessage = encodeURIComponent(message);
 const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
 export const navlogos: Navtypes[] = [
-  { url: "mail", logo: IoMdMail },
-  { url: "https://www.linkedin.com/in/justo-becerra-14868a1b4/", logo: FaLinkedin },
-  { url: "https://github.com/JustBecerra", logo: FaGithub },
+  { url: 'mail', logo: IoMdMail },
+  {
+    url: 'https://www.linkedin.com/in/justo-becerra-14868a1b4/',
+    logo: FaLinkedin,
+  },
+  { url: 'https://github.com/JustBecerra', logo: FaGithub },
   { url: whatsappURL, logo: FaWhatsapp },
 ];
 
 export const scrollRoutes = [
   {
-    name: "About",
+    name: 'About',
   },
   {
-    name: "Projects",
+    name: 'Projects',
+  },
+];
+
+export const ProfessionalInfo = [
+  {
+    imageURL: '/sinergiavaloresSH.png',
+    projectIcon: '/sinergiavaloresIcon.ico',
+    name: 'Sinergia Valores',
+    type: 'Business Website',
+    description:
+      'Website I designed as Freelance to display information and contact with an insurance company.',
+    listOfIcons: [
+      BiLogoTypescript,
+      IoLogoCss3,
+      IoLogoHtml5,
+      SiTailwindcss,
+      SiAstro,
+    ],
+    appLink: 'https://www.sinergiavalores.com/',
+    repoLink: '',
   },
 ];
 
@@ -103,6 +139,7 @@ export const ChallengeInfo = [
       IoLogoHtml5,
       RiNextjsFill,
       FaGolang,
+      BiLogoPostgresql,
     ],
     appLink: 'https://fun-quiz-time.vercel.app/',
     repoLink: 'https://github.com/JustBecerra/QuizTime',
@@ -111,67 +148,71 @@ export const ChallengeInfo = [
 
 export const TechandToolsList: TechandToolsTypes[] = [
   {
-    name: "React",
+    name: 'Astro',
+    logo: SiAstro,
+  },
+  {
+    name: 'React',
     logo: IoLogoReact,
   },
   {
-    name: "Node",
+    name: 'Node',
     logo: IoLogoNodejs,
   },
   {
-    name: "Javascript",
+    name: 'Javascript',
     logo: IoLogoJavascript,
   },
   {
-    name: "Typescript",
+    name: 'Typescript',
     logo: BiLogoTypescript,
   },
   {
-    name: "HTML",
+    name: 'HTML',
     logo: IoLogoHtml5,
   },
   {
-    name: "CSS",
+    name: 'CSS',
     logo: IoLogoCss3,
   },
   {
-    name: "Figma",
+    name: 'Figma',
     logo: IoLogoFigma,
   },
   {
-    name: "NextJs",
+    name: 'NextJs',
     logo: RiNextjsFill,
   },
   {
-    name: "Git",
+    name: 'Git',
     logo: FaGitAlt,
   },
   {
-    name: "Github",
+    name: 'Github',
     logo: FaGithub,
   },
   {
-    name: "Redux",
+    name: 'Redux',
     logo: SiRedux,
   },
   {
-    name: "Golang",
+    name: 'Golang',
     logo: FaGolang,
   },
   {
-    name: "PostgreSQL",
+    name: 'PostgreSQL',
     logo: BiLogoPostgresql,
   },
   {
-    name: "Vite",
+    name: 'Vite',
     logo: SiVite,
   },
   {
-    name: "Tailwind",
+    name: 'Tailwind',
     logo: SiTailwindcss,
   },
   {
-    name: "Express",
+    name: 'Express',
     logo: SiExpress,
   },
 ];
