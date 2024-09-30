@@ -40,6 +40,39 @@ export const scrollRoutes = [
 
 export const ChallengeInfo = [
   {
+    imageURL: '/rick&mortySH.png',
+    projectIcon: '/rick&mortyicon.ico',
+    name: 'Rick & Morty App',
+    type: 'Character Selection App',
+    description:
+      'App created to showcase and compare which characters share episodes together.',
+    listOfIcons: [
+      BiLogoTypescript,
+      IoLogoCss3,
+      IoLogoHtml5,
+      RiNextjsFill,
+      SiTailwindcss,
+    ],
+    appLink:
+      'https://rick-and-morty-challenge-justbecerras-projects.vercel.app/',
+    repoLink: 'https://github.com/JustBecerra/rick-morty-challenge',
+  },
+  {
+    imageURL: '/marvelseekerSH.png',
+    projectIcon: '/marvelseekerIcon.svg',
+    name: 'Marvel Seeker',
+    type: 'Character showcase',
+    description:
+      'App that showcases characters from the marvel universe. Information is retrieved from the Marvel public API.',
+    listOfIcons: [
+      BiLogoTypescript,
+      IoLogoCss3,
+      IoLogoHtml5,
+      RiNextjsFill,
+      SiRedux,
+    ],
+  },
+  {
     imageURL: '/caloriecounterSH.png',
     projectIcon: '/caloriesIcon.png',
     name: 'Calorie Counter',
