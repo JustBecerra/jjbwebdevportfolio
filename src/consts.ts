@@ -114,7 +114,7 @@ export const ChallengeInfo = [
     name: 'Calorie Counter',
     type: 'Fitness App',
     description:
-      'App designed to track calories and get your health in check. Helps with gaining and losing weight.',
+      'App focused on tracking calories and get your health in check. Helps with gaining and losing weight.',
     listOfIcons: [
       BiLogoTypescript,
       IoLogoCss3,
@@ -131,7 +131,7 @@ export const ChallengeInfo = [
     name: 'Fun Quiz Time!',
     type: 'Quiz App',
     description:
-      'App designed to put your history knowledge to the test. Most questions come from The Trivia API but you can also find user submitted questions.',
+      'Fun Quiz Time has the purpose of putting your history knowledge to the test. Most questions come from The Trivia API but you can also find user submitted questions.',
     listOfIcons: [
       BiLogoTypescript,
       SiTailwindcss,
