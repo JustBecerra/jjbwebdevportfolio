@@ -1,13 +1,11 @@
 ---
-import MyInformation from "./MyInformation.astro";
-import TechandTools from "./TechandTools.tsx";
-import TechandToolsMobile from "./TechandToolsMobile.astro";
+import MyInformation from './MyInformation.astro';
 ---
 
-<section class="w-full h-screen">
-  <div class="w-full lg:max-w-7xl lg:mx-auto mx-0 lg:h-full flex flex-col items-center px-8 gap-12">
-    <MyInformation />
-    <TechandTools client:load />
-    <TechandToolsMobile />
-  </div>
+<section class="w-full h-fit">
+	<div
+		class="w-full lg:max-w-7xl lg:mx-auto mx-0 lg:h-full flex flex-col items-center px-8 gap-12"
+	>
+		<MyInformation />
+	</div>
 </section>
