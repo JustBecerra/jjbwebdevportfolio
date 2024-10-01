@@ -1,0 +1,23 @@
+---
+import { navlogos, type Navtypes } from '../consts';
+---
+
+<footer
+	class="w-full h-[200px] border-t-2 border-gray flex flex-col items-center justify-center gap-6"
+>
+	<h1 class="text-green font-bold text-3xl text-nowrap lg:text-4xl">
+		Get in touch
+	</h1>
+	<div class="flex gap-6">
+		{
+			navlogos.map((nav: Navtypes) => (
+				<a href={nav.url} target="_blank" class="transparent">
+					<nav.logo className="hover:text-green text-2xl dark:hover:text-green text-gray dark:text-white" />
+				</a>
+			))
+		}
+	</div>
+	<h2>
+		© {new Date().getFullYear()} Justo Juan Becerra. All rights reserved.
+	</h2>
+</footer>
