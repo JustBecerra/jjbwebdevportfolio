@@ -1,13 +1,15 @@
 ---
-import DesktopNavbar from "./DesktopNavbar.astro";
-import MobileNavbar from "./MobileNavbar.astro";
+import DesktopNavbar from './DesktopNavbar.astro';
+import MobileNavbar from './MobileNavbar.astro';
 ---
 
-<header class="relative bg-white dark:bg-blue shadow-lg">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 hidden lg:block">
-    <DesktopNavbar />
-  </div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 block lg:hidden">
-    <MobileNavbar />
-  </div>
+<header class="h-fit">
+	<div
+		class="max-w-7xl mx-auto px-4 bg-white dark:bg-blue shadow-lg sm:px-6 hidden lg:fixed lg:rounded-xl top-3 left-0 right-0 z-50 lg:block"
+	>
+		<DesktopNavbar />
+	</div>
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 block lg:hidden">
+		<MobileNavbar />
+	</div>
 </header>
