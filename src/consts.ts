@@ -108,23 +108,23 @@ export const ChallengeInfo = [
       SiRedux,
     ],
   },
-  {
-    imageURL: '/caloriecounterSH.png',
-    projectIcon: '/caloriesIcon.png',
-    name: 'Calorie Counter',
-    type: 'Fitness App',
-    description:
-      'App focused on tracking calories and get your health in check. Helps with gaining and losing weight.',
-    listOfIcons: [
-      BiLogoTypescript,
-      IoLogoCss3,
-      IoLogoHtml5,
-      IoLogoReact,
-      SiVite,
-    ],
-    appLink: 'https://calorie-counter-justbecerra.vercel.app/',
-    repoLink: 'https://github.com/JustBecerra/calorie-counter',
-  },
+  // {
+  //   imageURL: '/caloriecounterSH.png',
+  //   projectIcon: '/caloriesIcon.png',
+  //   name: 'Calorie Counter',
+  //   type: 'Fitness App',
+  //   description:
+  //     'App focused on tracking calories and get your health in check. Helps with gaining and losing weight.',
+  //   listOfIcons: [
+  //     BiLogoTypescript,
+  //     IoLogoCss3,
+  //     IoLogoHtml5,
+  //     IoLogoReact,
+  //     SiVite,
+  //   ],
+  //   appLink: 'https://calorie-counter-justbecerra.vercel.app/',
+  //   repoLink: 'https://github.com/JustBecerra/calorie-counter',
+  // },
   {
     imageURL: '/quiztimeSH.png',
     projectIcon: '/quiztimeicon.ico',
