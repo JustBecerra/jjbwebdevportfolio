@@ -36,7 +36,7 @@ const encodedMessage = encodeURIComponent(message);
 const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
 export const navlogos: Navtypes[] = [
-  { url: 'mail', logo: IoMdMail },
+  { url: 'mailto:justobecerra@gmail.com', logo: IoMdMail },
   {
     url: 'https://www.linkedin.com/in/justo-becerra-14868a1b4/',
     logo: FaLinkedin,
