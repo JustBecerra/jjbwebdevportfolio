@@ -28,11 +28,13 @@ import { LanguageSelector } from 'astro-i18next/components';
 		/>
 		<div class="flex w-full flex-col lg:flex-row gap-8 lg:gap-4">
 			<button
+				onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"
 				class="lg:transparent w-full lg:border-0 border-green border-2 rounded-full p-2 font-bold hover:text-green dark:hover:text-green text-gray dark:text-white font-playfairDisplay"
 			>
 				About
 			</button>
 			<button
+				onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })"
 				class="lg:transparent w-full lg:border-0 border-green border-2 rounded-full p-2 font-bold hover:text-green dark:hover:text-green text-gray dark:text-white font-playfairDisplay"
 			>
 				Projects
