@@ -1,13 +1,16 @@
 ---
-import IntroText from "./IntroText.astro";
+import IntroText from './IntroText.astro';
 ---
 
 <section class="lg:relative w-full h-screen">
-  <div class="w-full lg:max-w-7xl lg:mx-auto mx-0 lg:h-full flex relative z-10">
-    <IntroText />
-  </div>
+	<div class="w-full lg:max-w-7xl lg:mx-auto mx-0 lg:h-full flex relative z-10">
+		<IntroText />
+	</div>
 
-  <div class="relative lg:absolute top-0 right-0 w-full lg:w-1/2 h-[85%]">
-    <img src="./BackgroundIntroPic.webp" class="w-full h-1/2 lg:h-full lg:rounded-l-full object-cover" />
-  </div>
+	<div class="relative lg:absolute top-20 right-0 w-full lg:w-1/2 h-[70%]">
+		<img
+			src="./BackgroundIntroPic.webp"
+			class="w-full h-1/2 lg:h-full lg:rounded-l-full object-cover"
+		/>
+	</div>
 </section>
