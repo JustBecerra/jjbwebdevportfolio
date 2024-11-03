@@ -2,6 +2,7 @@
 import { FaHome } from 'react-icons/fa';
 import { navlogos, type Navtypes } from '../consts';
 import FunctionLogos from './FunctionLogos';
+import { LanguageSelector } from 'astro-i18next/components';
 ---
 
 <div class="flex justify-between items-center py-4">
@@ -17,6 +18,25 @@ import FunctionLogos from './FunctionLogos';
 				</a>
 			))
 		}
-		<FunctionLogos client:load />
+
+		<FunctionLogos client:only="react" />
+		<LanguageSelector
+			showFlag={true}
+			languageMapping={{ en: 'English', es: 'Español' }}
+			style="background: transparent"
+			class="font-bold text-gray dark:text-white"
+		/>
+		<div class="flex w-full flex-col lg:flex-row gap-8 lg:gap-4">
+			<button
+				class="lg:transparent w-full lg:border-0 border-green border-2 rounded-full p-2 font-bold hover:text-green dark:hover:text-green text-gray dark:text-white font-playfairDisplay"
+			>
+				About
+			</button>
+			<button
+				class="lg:transparent w-full lg:border-0 border-green border-2 rounded-full p-2 font-bold hover:text-green dark:hover:text-green text-gray dark:text-white font-playfairDisplay"
+			>
+				Projects
+			</button>
+		</div>
 	</div>
 </div>
