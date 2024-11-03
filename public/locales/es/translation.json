@@ -4,5 +4,10 @@
     "subtitle": "Desarrollador de software y apasionado solucionador de problemas de La Plata, Argentina.",
     "viewProjects": "Ver Proyectos",
     "getInTouch": "Contactar"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "Soy un desarrollador de software con una sólida experiencia en desarrollo web, así como en desarrollo móvil. Mi pasión es crear sitios web y aplicaciones web elegantes y optimizadas.",
+    "description2": "Me apasiona el mundo del gaming y el aprendizaje de nuevas tecnologías, siempre mejorando para mantenerme a la vanguardia. Además, me gusta hacer ejercicio y practicar cardio de vez en cuando, lo considero un balance necesario para contrarrestar la vida sedentaria de un desarrollador de software."
   }
 }

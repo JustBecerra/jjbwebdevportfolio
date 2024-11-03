@@ -4,5 +4,10 @@
     "subtitle": "Software Developer and passionate problem-solver from La Plata, Argentina.",
     "viewProjects": "View Projects",
     "getInTouch": "Get in touch"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm an experienced Software Developer with a solid background in web development as well as some mobile development. It is my passion to build slick & well optimized websites and web apps.",
+    "description2": "I’m very much into gaming and learning to work with new technologies, always improving myself to stay on top of my field. Further, I like working out and do some cardio from time to time, I see it as a necessary balance to counter the sedentary life of a software developer."
   }
 }
