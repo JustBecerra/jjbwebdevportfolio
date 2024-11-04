@@ -1,4 +1,8 @@
 {
+  "navbar": {
+    "about": "About",
+    "projects": "Projects"
+  },
   "home": {
     "title": "Developing <0>fresh and fast apps</0> with passion!",
     "subtitle": "Software Developer and passionate problem-solver from La Plata, Argentina.",
@@ -24,5 +28,9 @@
     "quiztimeDescription": "Fun Quiz Time has the purpose of putting your history knowledge to the test. Most questions come from The Trivia API but you can also find user submitted questions.",
     "sinergiavaloresType": "Business Website",
     "sinergiavaloresDescription": "Website I designed as Freelance to display information and contact with an insurance company."
+  },
+  "footer": {
+    "getInTouch": "Get in touch",
+    "copyright": "All rights reserved."
   }
 }

@@ -19,7 +19,7 @@ import {
   IoLogoCss3,
   IoLogoFigma,
 } from 'react-icons/io5';
-import { t } from 'i18next';
+
 
 export type Navtypes = {
   url: string;

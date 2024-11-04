@@ -1,12 +1,13 @@
 ---
 import { navlogos, type Navtypes } from '../consts';
+import { t } from 'i18next';
 ---
 
 <footer
 	class="w-full h-[200px] border-gray flex flex-col items-center justify-center gap-8"
 >
 	<h1 class="text-green font-bold text-3xl text-nowrap lg:text-4xl">
-		Get in touch
+		{t('footer.getInTouch')}
 	</h1>
 	<div class="flex gap-6">
 		{
@@ -18,6 +19,6 @@ import { navlogos, type Navtypes } from '../consts';
 		}
 	</div>
 	<h2 class="text-gray dark:text-white">
-		© {new Date().getFullYear()} Justo Juan Becerra. All rights reserved.
+		© {new Date().getFullYear()} Justo Juan Becerra. {t('footer.copyright')}
 	</h2>
 </footer>

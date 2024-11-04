@@ -1,4 +1,8 @@
 {
+  "navbar": {
+    "about": "Sobre mí",
+    "projects": "Proyectos"
+  },
   "home": {
     "title": "Desarrollando <0>aplicaciones nuevas y rápidas</0> con pasión",
     "subtitle": "Desarrollador de software y apasionado solucionador de problemas de La Plata, Argentina.",
@@ -24,5 +28,9 @@
     "quiztimeDescription": "Fun Quiz Time tiene como propósito poner a prueba tu conocimiento de historia. La mayoría de las preguntas vienen de The Trivia API, pero también puedes encontrar preguntas enviadas por los usuarios.",
     "sinergiavaloresType": "Sitio web de una empresa",
     "sinergiavaloresDescription": "Sitio web que diseñé como Freelance para mostrar información y contactar con una compañía de seguros."
+  },
+  "footer": {
+    "getInTouch": "Contactar",
+    "copyright": "Todos los derechos reservados."
   }
 }

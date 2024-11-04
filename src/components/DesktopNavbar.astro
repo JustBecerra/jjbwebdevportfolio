@@ -3,6 +3,7 @@ import { FaHome } from 'react-icons/fa';
 import { navlogos, type Navtypes } from '../consts';
 import FunctionLogos from './FunctionLogos';
 import { LanguageSelector } from 'astro-i18next/components';
+import { t } from 'i18next';
 ---
 
 <div class="flex justify-between items-center py-4">
@@ -31,13 +32,13 @@ import { LanguageSelector } from 'astro-i18next/components';
 				onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"
 				class="lg:transparent w-full lg:border-0 border-green border-2 rounded-full p-2 font-bold hover:text-green dark:hover:text-green text-gray dark:text-white font-playfairDisplay"
 			>
-				About
+				{t('navbar.about')}
 			</button>
 			<button
 				onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })"
 				class="lg:transparent w-full lg:border-0 border-green border-2 rounded-full p-2 font-bold hover:text-green dark:hover:text-green text-gray dark:text-white font-playfairDisplay"
 			>
-				Projects
+				{t('navbar.projects')}
 			</button>
 		</div>
 	</div>
