@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { TechandToolsList, type TechandToolsTypes } from "../consts";
 import { SingleTech } from "./SingleTech";
+import { t } from 'i18next';
 
 const TechListWrapper = () => {
   const [stop, setStop] = useState(false);
@@ -16,7 +17,10 @@ const TechListWrapper = () => {
       if (!stop) {
         setScrollPosition((prevPosition) => {
           const newPosition = prevPosition - 1;
-          if (containerRef.current && Math.abs(newPosition) >= containerRef.current.scrollWidth / 2) {
+          if (
+            containerRef.current &&
+            Math.abs(newPosition) >= containerRef.current.scrollWidth / 2
+          ) {
             return 0;
           }
           return newPosition;
@@ -37,7 +41,7 @@ const TechListWrapper = () => {
       onMouseLeave={() => setStop(false)}
     >
       <h1 className="text-green font-bold text-2xl mb-8">
-        Tools & Technologies I use
+        {t('projects.tools')}
       </h1>
       <div className="relative w-full py-2 overflow-hidden">
         <div
