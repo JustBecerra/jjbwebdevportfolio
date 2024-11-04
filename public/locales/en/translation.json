@@ -1,6 +1,36 @@
 {
+  "navbar": {
+    "about": "About",
+    "projects": "Projects"
+  },
   "home": {
     "title": "Developing <0>fresh and fast apps</0> with passion!",
-    "subtitle": "This is a <0>more complex</0> string to translate, mixed with <1>html elements</1>, such as a <2>a cool link</2>!"
+    "subtitle": "Software Developer and passionate problem-solver from La Plata, Argentina.",
+    "viewProjects": "View Projects",
+    "getInTouch": "Get in touch"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm an experienced Software Developer with a solid background in web development as well as some mobile development. It is my passion to build slick & well optimized websites and web apps.",
+    "description2": "I’m very much into gaming and learning to work with new technologies, always improving myself to stay on top of my field. Further, I like working out and do some cardio from time to time, I see it as a necessary balance to counter the sedentary life of a software developer."
+  },
+  "projects": {
+    "tools": "Tools & Technologies I use",
+    "title": "Featured Personal Projects",
+    "professional": "Professional Work Excerpts",
+    "tech": "Technologies Used",
+    "repoLink": "Code",
+    "rick&mortyType": "Character Selection App",
+    "rick&mortyDescription": "App created to showcase and compare which characters share episodes together.",
+    "marvelseekerType": "Character Showcase",
+    "marvelseekerDescription": "App that showcases characters from the marvel universe. Information is retrieved from the Marvel public API.",
+    "quiztimeType": "Quiz App",
+    "quiztimeDescription": "Fun Quiz Time has the purpose of putting your history knowledge to the test. Most questions come from The Trivia API but you can also find user submitted questions.",
+    "sinergiavaloresType": "Business Website",
+    "sinergiavaloresDescription": "Website I designed as Freelance to display information and contact with an insurance company."
+  },
+  "footer": {
+    "getInTouch": "Get in touch",
+    "copyright": "All rights reserved."
   }
 }

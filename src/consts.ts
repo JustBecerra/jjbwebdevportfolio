@@ -20,6 +20,7 @@ import {
   IoLogoFigma,
 } from 'react-icons/io5';
 
+
 export type Navtypes = {
   url: string;
   logo: IconType;
@@ -59,9 +60,8 @@ export const ProfessionalInfo = [
     imageURL: '/sinergiavaloresSH.png',
     projectIcon: '/sinergiavaloresIcon.ico',
     name: 'Sinergia Valores',
-    type: 'Business Website',
-    description:
-      'Website I designed as Freelance to display information and contact with an insurance company.',
+    type: 'projects.sinergiavaloresType',
+    description: 'projects.sinergiavaloresDescription',
     listOfIcons: [
       BiLogoTypescript,
       IoLogoCss3,
@@ -79,9 +79,8 @@ export const ChallengeInfo = [
     imageURL: '/rick&mortySH.png',
     projectIcon: '/rick&mortyicon.ico',
     name: 'Rick & Morty App',
-    type: 'Character Selection App',
-    description:
-      'App created to showcase and compare which characters share episodes together.',
+    type: 'projects.rick&mortyType',
+    description: 'projects.rick&mortyDescription',
     listOfIcons: [
       BiLogoTypescript,
       IoLogoCss3,
@@ -97,9 +96,8 @@ export const ChallengeInfo = [
     imageURL: '/marvelseekerSH.png',
     projectIcon: '/marvelseekerIcon.svg',
     name: 'Marvel Seeker',
-    type: 'Character showcase',
-    description:
-      'App that showcases characters from the marvel universe. Information is retrieved from the Marvel public API.',
+    type: 'projects.marvelseekerType',
+    description: 'projects.marvelseekerDescription',
     listOfIcons: [
       BiLogoTypescript,
       IoLogoCss3,
@@ -108,30 +106,12 @@ export const ChallengeInfo = [
       SiRedux,
     ],
   },
-  // {
-  //   imageURL: '/caloriecounterSH.png',
-  //   projectIcon: '/caloriesIcon.png',
-  //   name: 'Calorie Counter',
-  //   type: 'Fitness App',
-  //   description:
-  //     'App focused on tracking calories and get your health in check. Helps with gaining and losing weight.',
-  //   listOfIcons: [
-  //     BiLogoTypescript,
-  //     IoLogoCss3,
-  //     IoLogoHtml5,
-  //     IoLogoReact,
-  //     SiVite,
-  //   ],
-  //   appLink: 'https://calorie-counter-justbecerra.vercel.app/',
-  //   repoLink: 'https://github.com/JustBecerra/calorie-counter',
-  // },
   {
     imageURL: '/quiztimeSH.png',
     projectIcon: '/quiztimeicon.ico',
     name: 'Fun Quiz Time!',
-    type: 'Quiz App',
-    description:
-      'Fun Quiz Time has the purpose of putting your history knowledge to the test. Most questions come from The Trivia API but you can also find user submitted questions.',
+    type: 'projects.quiztimeType',
+    description: 'projects.quiztimeDescription',
     listOfIcons: [
       BiLogoTypescript,
       SiTailwindcss,

@@ -2,6 +2,7 @@
 import { IoMdMail } from 'react-icons/io';
 import { FaEye } from 'react-icons/fa';
 import { Trans } from 'astro-i18next/components';
+import { t } from 'i18next';
 ---
 
 <div
@@ -19,16 +20,16 @@ import { Trans } from 'astro-i18next/components';
 	<h3
 		class="lg:text-2xl md:max-3-xl text-gray dark:text-white text-xl text-center lg:text-left"
 	>
-		Software Developer and passionate problem-solver from La Plata, Argentina.
+		{t('home.subtitle')}
 	</h3>
 	<div class="w-full flex flex-col lg:flex-row items-center gap-2">
 		<a
 			class="text-white shadow-lg w-[90%] lg:w-[40%] bg-green px-4 py-3 rounded-full cursor-pointer flex justify-center items-center"
-			><FaEye className="mr-3 text-2xl" />View Projects</a
+			><FaEye className="mr-3 text-2xl" />{t('home.viewProjects')}</a
 		>
 		<a
 			class="text-white shadow-lg w-[90%] lg:w-[40%] bg-gray px-4 py-3 rounded-full cursor-pointer flex justify-center items-center"
-			><IoMdMail className="mr-3 text-2xl" /> Get in touch</a
+			><IoMdMail className="mr-3 text-2xl" />{t('home.getInTouch')}</a
 		>
 	</div>
 </div>

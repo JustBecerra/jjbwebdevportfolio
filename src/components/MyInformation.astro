@@ -1,24 +1,21 @@
 ---
-
+import { t } from 'i18next';
 ---
 
 <>
-	<h1 id="about" class="text-green font-bold text-4xl mb-8">About Me</h1>
+	<h1 id="about" class="text-green font-bold text-4xl mb-8">
+		{t('about.title')}
+	</h1>
 	<div class="flex gap-12 flex-col lg:flex-row">
 		<div
 			class="flex flex-col items-center justify-center text-xl gap-12 text-gray dark:text-white tracking-tight"
 		>
 			<p>
-				I'm an experienced Software Developer with a solid background in web
-				development as well as some mobile development. It is my passion to
-				build slick & well optimized websites and web apps.
+				{t('about.description')}
 			</p>
 
 			<p>
-				I’m very much into gaming and learning to work with new technologies,
-				always improving myself to stay on top of my field. Further, I like
-				working out and do some cardio from time to time, I see it as a
-				necessary balance to counter the sedentary life of a software developer.
+				{t('about.description2')}
 			</p>
 		</div>
 		<div>

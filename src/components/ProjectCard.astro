@@ -1,6 +1,6 @@
 ---
 import type { IconType } from 'react-icons/lib';
-
+import { t } from 'i18next';
 const { image, icon, name, type, description, listIcons, appLink, repoLink } =
 	Astro.props;
 ---
@@ -15,16 +15,16 @@ const { image, icon, name, type, description, listIcons, appLink, repoLink } =
 		<div class="flex w-full gap-4">
 			<img src={icon} class="w-[40px] h-[40px]" />
 			<div>
-				<h3 class="text-white font-bold">{type}</h3>
+				<h3 class="text-white font-bold">{t(type)}</h3>
 				<h2 class="text-green font-bold">{name}</h2>
 			</div>
 		</div>
 		<p class="text-white ml-2">
-			{description}
+			{t(description)}
 		</p>
 	</div>
 	<div class="flex flex-col items-center gap-4">
-		<h3 class="text-green font-bold">Technologies Used</h3>
+		<h3 class="text-green font-bold">{t('projects.tech')}</h3>
 		<div class="flex text-4xl gap-4 text-green">
 			{listIcons.map((Icon: IconType) => <Icon />)}
 		</div>
@@ -32,12 +32,13 @@ const { image, icon, name, type, description, listIcons, appLink, repoLink } =
 			<a
 				href={appLink}
 				target="_blank"
-				class="bg-green px-4 py-2 rounded-full text-white">Live Link</a
+				class="bg-green px-4 py-2 rounded-full text-white">Link</a
 			>
 			<a
 				href={repoLink}
 				target="_blank"
-				class="bg-white px-4 py-2 rounded-full border-2 border-green">Code</a
+				class="bg-white px-4 py-2 rounded-full border-2 border-green"
+				>{t('projects.repoLink')}</a
 			>
 		</div>
 	</div>
