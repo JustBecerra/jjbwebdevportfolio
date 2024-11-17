@@ -26,10 +26,8 @@ import { t } from 'i18next';
 		<LanguageSelector
 			showFlag={true}
 			languageMapping={{ en: 'English', es: 'Español' }}
-			style="background: transparent"
-			class="font-bold text-gray dark:text-white"
+			class="font-bold text-gray dark:text-white bg-white dark:bg-blue"
 		/>
-		<!-- <div class="flex flex-col lg:flex-row"> -->
 		<button
 			onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"
 			class="lg:transparent w-full text-nowrap lg:border-0 border-green border-2 py-2 rounded-full font-bold hover:text-green dark:hover:text-green text-gray dark:text-white font-playfairDisplay"
@@ -42,6 +40,5 @@ import { t } from 'i18next';
 		>
 			{t('navbar.projects')}
 		</button>
-		<!-- </div> -->
 	</div>
 </div>
