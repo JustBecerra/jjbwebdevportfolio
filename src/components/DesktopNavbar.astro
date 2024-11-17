@@ -11,7 +11,8 @@ import { t } from 'i18next';
 		><FaHome
 			className="hover:text-green text-3xl text-gray dark:hover:text-green dark:text-white"
 		/></a
-	><div class="flex items-center justify-end gap-4">
+	>
+	<div class="flex items-center justify-end gap-4">
 		{
 			navlogos.map((nav: Navtypes) => (
 				<a href={nav.url} target="_blank" class="transparent">
@@ -19,27 +20,25 @@ import { t } from 'i18next';
 				</a>
 			))
 		}
-
-		<FunctionLogos client:only="react" />
+		<div class="flex w-[20px]">
+			<FunctionLogos client:only="react" />
+		</div>
 		<LanguageSelector
 			showFlag={true}
 			languageMapping={{ en: 'English', es: 'Español' }}
-			style="background: transparent"
-			class="font-bold text-gray dark:text-white"
+			class="font-bold text-gray dark:text-white bg-white dark:bg-blue"
 		/>
-		<div class="flex w-full flex-col lg:flex-row gap-8 lg:gap-4">
-			<button
-				onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"
-				class="lg:transparent w-full lg:border-0 border-green border-2 rounded-full p-2 font-bold hover:text-green dark:hover:text-green text-gray dark:text-white font-playfairDisplay"
-			>
-				{t('navbar.about')}
-			</button>
-			<button
-				onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })"
-				class="lg:transparent w-full lg:border-0 border-green border-2 rounded-full p-2 font-bold hover:text-green dark:hover:text-green text-gray dark:text-white font-playfairDisplay"
-			>
-				{t('navbar.projects')}
-			</button>
-		</div>
+		<button
+			onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"
+			class="lg:transparent w-full text-nowrap lg:border-0 border-green border-2 py-2 rounded-full font-bold hover:text-green dark:hover:text-green text-gray dark:text-white font-playfairDisplay"
+		>
+			{t('navbar.about')}
+		</button>
+		<button
+			onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })"
+			class="lg:transparent w-full lg:border-0 border-green border-2 rounded-full py-2 font-bold hover:text-green dark:hover:text-green text-gray dark:text-white font-playfairDisplay"
+		>
+			{t('navbar.projects')}
+		</button>
 	</div>
 </div>
