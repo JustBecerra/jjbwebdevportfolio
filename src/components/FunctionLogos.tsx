@@ -2,7 +2,12 @@ import { useEffect, useState } from 'react';
 import { FaRegSun, FaMoon } from 'react-icons/fa';
 
 const FunctionLogos = () => {
-  const [changeTheme, setChangeTheme] = useState('light');
+  const [changeTheme, setChangeTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('theme') || 'light';
+    }
+    return 'light';
+  });
 
   const handleTheme = () => {
     if (changeTheme === 'light') setChangeTheme('dark');
