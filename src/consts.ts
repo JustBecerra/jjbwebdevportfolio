@@ -105,6 +105,8 @@ export const ChallengeInfo = [
       RiNextjsFill,
       SiRedux,
     ],
+    appLink: 'https://marvel-seeker.vercel.app/',
+    repoLink: 'https://github.com/JustBecerra/MarvelSeeker',
   },
   {
     imageURL: '/quiztimeSH.png',
