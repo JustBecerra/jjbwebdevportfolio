@@ -1,48 +1,72 @@
 ---
-import { FaHome } from "react-icons/fa";
-import { navlogos, type Navtypes } from "../consts";
-import FunctionLogos from "./FunctionLogos";
+import { FaHome } from 'react-icons/fa';
+import { navlogos, type Navtypes } from '../consts';
+import FunctionLogos from './FunctionLogos';
+import { LanguageSelector } from 'astro-i18next/components';
 ---
 
-<div class="flex justify-between items-start py-4">
-  <a href="/" class="flex">
-    <FaHome className="hover:text-green text-3xl text-gray dark:hover:text-green dark:text-white" />
-  </a>
-  <div class="w-4/5 flex flex-col items-end gap-8">
-    <button id="burger" class="text-gray-600 focus:outline-none">
-      <svg class="w-8 h-8 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </button>
-
-    <nav id="menu" class="flex flex-col w-full gap-4 items-center max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-      <div class="flex my-4 w-full justify-between">
-        {
-          navlogos.map((nav: Navtypes) => (
-            <a href={nav.url} target="_blank" class="transparent">
-              <nav.logo className="hover:text-green text-3xl dark:hover:text-green text-gray dark:text-white" />
-            </a>
-          ))
-        }
-      </div>
-      <FunctionLogos client:load />
-    </nav>
-  </div>
+<div class="flex flex-col py-4">
+	<div class="flex justify-between">
+		<a href="/" class="flex">
+			<FaHome
+				className="hover:text-green text-3xl text-gray dark:hover:text-green dark:text-white"
+			/>
+		</a>
+		<div class="w-4/5 flex flex-col items-end gap-8">
+			<button id="burger" class="text-gray-600 focus:outline-none">
+				<svg
+					class="w-8 h-8 dark:text-white"
+					fill="none"
+					stroke="currentColor"
+					viewBox="0 0 24 24"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M4 6h16M4 12h16m-7 6h7"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<nav
+		id="menu"
+		class="flex flex-col w-full gap-4 items-center max-h-0 mt-6 overflow-hidden transition-all duration-500 ease-in-out"
+	>
+		<div class="flex my-4 w-full justify-between">
+			{
+				navlogos.map((nav: Navtypes) => (
+					<a href={nav.url} target="_blank" class="transparent">
+						<nav.logo className="hover:text-green text-3xl dark:hover:text-green text-gray dark:text-white" />
+					</a>
+				))
+			}
+		</div>
+		<div class="flex justify-between w-[60%]">
+			<FunctionLogos client:load />
+			<LanguageSelector
+				showFlag={true}
+				languageMapping={{ en: 'English', es: 'Español' }}
+				class="font-bold text-gray dark:text-white bg-white dark:bg-blue"
+			/>
+		</div>
+	</nav>
 </div>
 
 <script>
-  const burgerButton = document.getElementById("burger");
-  const menu = document.getElementById("menu");
+	const burgerButton = document.getElementById('burger');
+	const menu = document.getElementById('menu');
 
-  if (burgerButton && menu) {
-    burgerButton.addEventListener("click", function () {
-      if (menu.classList.contains("max-h-0")) {
-        menu.classList.remove("max-h-0");
-        menu.classList.add("max-h-[500px]");
-      } else {
-        menu.classList.remove("max-h-[500px]");
-        menu.classList.add("max-h-0");
-      }
-    });
-  }
+	if (burgerButton && menu) {
+		burgerButton.addEventListener('click', function () {
+			if (menu.classList.contains('max-h-0')) {
+				menu.classList.remove('max-h-0');
+				menu.classList.add('max-h-[500px]');
+			} else {
+				menu.classList.remove('max-h-[500px]');
+				menu.classList.add('max-h-0');
+			}
+		});
+	}
 </script>
