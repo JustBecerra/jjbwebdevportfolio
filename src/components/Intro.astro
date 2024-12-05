@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import IntroText from './IntroText.astro';
+import BackgroundIntroPic from '../../public/BackgroundIntroPic.webp';
 ---
 
 <section class="lg:relative w-full h-screen">
@@ -8,9 +10,10 @@ import IntroText from './IntroText.astro';
 	</div>
 
 	<div class="relative lg:absolute top-20 right-0 w-full lg:w-1/2 h-[70%]">
-		<img
-			src="./BackgroundIntroPic.webp"
+		<Image
 			class="w-full h-1/2 lg:h-full lg:rounded-l-full object-cover"
+			src={BackgroundIntroPic}
+			alt=""
 		/>
 	</div>
 </section>
