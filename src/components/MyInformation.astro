@@ -1,5 +1,7 @@
 ---
 import { t } from 'i18next';
+import Sonriente from '../../public/sonriente.jpg';
+import { Image } from 'astro:assets';
 ---
 
 <>
@@ -19,7 +21,7 @@ import { t } from 'i18next';
 			</p>
 		</div>
 		<div>
-			<img class="rounded-full" src="./sonriente.jpg" alt="" />
+			<Image class="rounded-full" src={Sonriente} alt="" />
 		</div>
 	</div>
 </>
