@@ -24,7 +24,7 @@ const FunctionLogos = () => {
   }, [changeTheme]);
 
   return (
-    <button onClick={handleTheme}>
+    <button id="theme" onClick={handleTheme}>
       {changeTheme === 'dark' ? (
         <FaMoon className="hover:text-green dark:hover:text-green text-gray dark:text-white text-3xl lg:text-xl" />
       ) : (
