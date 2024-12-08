@@ -228,7 +228,7 @@ export const TechandToolsList: TechandToolsTypes[] = [
     logo: IoLogoFigma,
   },
   {
-    name: 'NextJs',
+    name: 'Next',
     logo: RiNextjsFill,
   },
   {
