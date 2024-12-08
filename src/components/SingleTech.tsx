@@ -8,9 +8,10 @@ export const SingleTech = ({ logo: Logo, name }: TechandToolsTypes) => {
 
   const handleClick = () => {
     activateTech(name);
-    const projects = document.getElementById('projects');
+
+    const projects = document.getElementById(name);
     if (projects) {
-      projects.scrollIntoView({ behavior: 'smooth' });
+      projects.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   };
   return (
