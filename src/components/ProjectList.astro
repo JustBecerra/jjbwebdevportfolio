@@ -1,9 +1,10 @@
 ---
 import { ChallengeInfo, ProfessionalInfo } from '../consts';
-import ProjectCard from './ProjectCard.astro';
+import { ProjectCard } from './ProjectCard';
 import TechandTools from './TechandTools';
 import TechandToolsMobile from './TechandToolsMobile.astro';
 import { t } from 'i18next';
+console.log(ChallengeInfo[0].listOfIcons[0].logo);
 ---
 
 <section class="w-full h-fit">
@@ -30,7 +31,7 @@ import { t } from 'i18next';
 							name={info.name}
 							type={info.type}
 							description={info.description}
-							listIcons={info.listOfIcons}
+							listOfIcons={info.listOfIcons}
 							appLink={info.appLink}
 							repoLink={info.repoLink}
 						/>
@@ -55,7 +56,7 @@ import { t } from 'i18next';
 							name={info.name}
 							type={info.type}
 							description={info.description}
-							listIcons={info.listOfIcons}
+							listOfIcons={info.listOfIcons}
 							appLink={info.appLink}
 							repoLink={info.repoLink}
 						/>
