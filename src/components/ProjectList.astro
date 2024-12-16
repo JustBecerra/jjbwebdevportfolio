@@ -1,6 +1,6 @@
 ---
 import { ChallengeInfo, ProfessionalInfo } from '../consts';
-import ProjectCard from './ProjectCard.astro';
+import { ProjectCard } from './ProjectCard';
 import TechandTools from './TechandTools';
 import TechandToolsMobile from './TechandToolsMobile.astro';
 import { t } from 'i18next';
@@ -25,14 +25,15 @@ import { t } from 'i18next';
 				{
 					ChallengeInfo.map((info) => (
 						<ProjectCard
+							client:load
 							image={info.imageURL}
 							icon={info.projectIcon}
 							name={info.name}
 							type={info.type}
 							description={info.description}
-							listIcons={info.listOfIcons}
 							appLink={info.appLink}
 							repoLink={info.repoLink}
+							typeProject="challenge"
 						/>
 					))
 				}
@@ -50,14 +51,15 @@ import { t } from 'i18next';
 				{
 					ProfessionalInfo.map((info) => (
 						<ProjectCard
+							client:load
 							image={info.imageURL}
 							icon={info.projectIcon}
 							name={info.name}
 							type={info.type}
 							description={info.description}
-							listIcons={info.listOfIcons}
 							appLink={info.appLink}
 							repoLink={info.repoLink}
+							typeProject="professional"
 						/>
 					))
 				}

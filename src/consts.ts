@@ -63,11 +63,26 @@ export const ProfessionalInfo = [
     type: 'projects.sinergiavaloresType',
     description: 'projects.sinergiavaloresDescription',
     listOfIcons: [
-      BiLogoTypescript,
-      IoLogoCss3,
-      IoLogoHtml5,
-      SiTailwindcss,
-      SiAstro,
+      {
+        name: 'Typescript',
+        logo: BiLogoTypescript,
+      },
+      {
+        name: 'CSS',
+        logo: IoLogoCss3,
+      },
+      {
+        name: 'HTML',
+        logo: IoLogoHtml5,
+      },
+      {
+        name: 'CSS',
+        logo: SiTailwindcss,
+      },
+      {
+        name: 'Astro',
+        logo: SiAstro,
+      },
     ],
     appLink: 'https://www.sinergiavalores.com/',
     repoLink: '',
@@ -82,11 +97,26 @@ export const ChallengeInfo = [
     type: 'projects.rick&mortyType',
     description: 'projects.rick&mortyDescription',
     listOfIcons: [
-      BiLogoTypescript,
-      IoLogoCss3,
-      IoLogoHtml5,
-      RiNextjsFill,
-      SiTailwindcss,
+      {
+        name: 'Typescript',
+        logo: BiLogoTypescript,
+      },
+      {
+        name: 'CSS',
+        logo: IoLogoCss3,
+      },
+      {
+        name: 'HTML',
+        logo: IoLogoHtml5,
+      },
+      {
+        name: 'Next',
+        logo: RiNextjsFill,
+      },
+      {
+        name: 'Tailwind',
+        logo: SiTailwindcss,
+      },
     ],
     appLink:
       'https://rick-and-morty-challenge-justbecerras-projects.vercel.app/',
@@ -99,11 +129,26 @@ export const ChallengeInfo = [
     type: 'projects.marvelseekerType',
     description: 'projects.marvelseekerDescription',
     listOfIcons: [
-      BiLogoTypescript,
-      IoLogoCss3,
-      IoLogoHtml5,
-      RiNextjsFill,
-      SiRedux,
+      {
+        name: 'Typescript',
+        logo: BiLogoTypescript,
+      },
+      {
+        name: 'CSS',
+        logo: IoLogoCss3,
+      },
+      {
+        name: 'HTML',
+        logo: IoLogoHtml5,
+      },
+      {
+        name: 'Next',
+        logo: RiNextjsFill,
+      },
+      {
+        name: 'Redux',
+        logo: SiRedux,
+      },
     ],
     appLink: 'https://marvel-seeker.vercel.app/',
     repoLink: 'https://github.com/JustBecerra/MarvelSeeker',
@@ -115,13 +160,34 @@ export const ChallengeInfo = [
     type: 'projects.quiztimeType',
     description: 'projects.quiztimeDescription',
     listOfIcons: [
-      BiLogoTypescript,
-      SiTailwindcss,
-      IoLogoCss3,
-      IoLogoHtml5,
-      RiNextjsFill,
-      FaGolang,
-      BiLogoPostgresql,
+      {
+        name: 'Typescript',
+        logo: BiLogoTypescript,
+      },
+      {
+        name: 'Tailwind',
+        logo: SiTailwindcss,
+      },
+      {
+        name: 'CSS',
+        logo: IoLogoCss3,
+      },
+      {
+        name: 'HTML',
+        logo: IoLogoHtml5,
+      },
+      {
+        name: 'Next',
+        logo: RiNextjsFill,
+      },
+      {
+        name: 'Go',
+        logo: FaGolang,
+      },
+      {
+        name: 'PostgreSQL',
+        logo: BiLogoPostgresql,
+      },
     ],
     appLink: 'https://fun-quiz-time.vercel.app/',
     repoLink: 'https://github.com/JustBecerra/QuizTime',
@@ -162,7 +228,7 @@ export const TechandToolsList: TechandToolsTypes[] = [
     logo: IoLogoFigma,
   },
   {
-    name: 'NextJs',
+    name: 'Next',
     logo: RiNextjsFill,
   },
   {
@@ -178,7 +244,7 @@ export const TechandToolsList: TechandToolsTypes[] = [
     logo: SiRedux,
   },
   {
-    name: 'Golang',
+    name: 'Go',
     logo: FaGolang,
   },
   {
