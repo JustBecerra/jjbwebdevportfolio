@@ -13,6 +13,10 @@ export const SingleTech = ({ logo: Logo, name }: TechandToolsTypes) => {
     if (projects) {
       projects.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+
+    setTimeout(() => {
+      activateTech('');
+    }, 4000);
   };
   return (
     <div

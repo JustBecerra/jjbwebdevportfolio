@@ -1,7 +1,5 @@
 import { t } from 'i18next';
-import type { IconType } from 'react-icons/lib';
 import { techStore } from '../store';
-import { useEffect, useState } from 'react';
 import { ChallengeInfo, ProfessionalInfo } from '../consts';
 interface ProjectCardProps {
   image: string;
@@ -31,11 +29,7 @@ export const ProjectCard = ({
   const currentTech = techStore((state) => state.tech);
 
   const compareTech = () => {
-    if (
-      techLogos?.find((element) => element.name === currentTech) !== undefined
-    ) {
-      return true;
-    }
+    if (techLogos?.find((element) => element.name === currentTech)) return true;
     return false;
   };
   return (
