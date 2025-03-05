@@ -4,6 +4,15 @@ export default {
   locales: ['en', 'es'],
   load: ['server', 'client'],
   i18nextServer: {
-    debug: true,
+    debug: process.env.NODE_ENV === 'development', // Enable debug only in development
+    backend: {
+      loadPath: '/locales/{{lng}}/translation.json', // Correct relative path for production
+    },
+  },
+  i18nextClient: {
+    debug: process.env.NODE_ENV === 'development', // Enable debug only in development
+    backend: {
+      loadPath: '/locales/{{lng}}/translation.json', // Correct relative path for production
+    },
   },
 };
