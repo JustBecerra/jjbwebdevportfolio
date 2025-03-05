@@ -1,17 +1,19 @@
 ---
-import { changeLanguage } from "i18next";
-import AboutMe from "../components/AboutMe.astro";
-import Footer from "../components/Footer.astro";
-import Intro from "../components/Intro.astro";
-import ProjectList from "../components/ProjectList.astro";
-import Layout from "../layouts/Layout.astro";
+import { changeLanguage } from 'i18next';
+import AboutMe from '../components/AboutMe.astro';
+import Footer from '../components/Footer.astro';
+import Intro from '../components/Intro.astro';
+import ProjectList from '../components/ProjectList.astro';
+import Layout from '../layouts/Layout.astro';
 
-changeLanguage("en");
+changeLanguage('en');
 ---
 
 <Layout title="Software Developer | Justo Becerra">
 	<main class="bg-white dark:bg-blue min-h-screen w-full flex flex-col gap-32">
-		<Intro /><AboutMe /><ProjectList />
+		<Intro />
+		<AboutMe />
+		<ProjectList />
 		<Footer />
 	</main>
 </Layout>

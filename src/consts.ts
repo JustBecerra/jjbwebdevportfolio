@@ -20,16 +20,16 @@ import {
   IoLogoFigma,
 } from 'react-icons/io5';
 
-
 export type Navtypes = {
   url: string;
   logo: IconType;
 };
 
 export type TechandToolsTypes = {
-  name: string;
   logo: IconType;
+  name: string;
 };
+
 
 const message = "Hello, I'd like to talk to you!";
 const phoneNumber = '+542215909321';

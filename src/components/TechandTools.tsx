@@ -3,7 +3,7 @@ import { TechandToolsList, type TechandToolsTypes } from "../consts";
 import { SingleTech } from "./SingleTech";
 import { t } from 'i18next';
 
-const TechListWrapper = () => {
+const TechandTools = () => {
   const [stop, setStop] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -52,7 +52,7 @@ const TechListWrapper = () => {
             transition: stop ? 'none' : 'transform 0.1s linear',
           }}
         >
-          {items.map((tt: TechandToolsTypes, index: number) => (
+          {TechandToolsList.map((tt: TechandToolsTypes, index: number) => (
             <SingleTech key={index} logo={tt.logo} name={tt.name} />
           ))}
         </div>
@@ -61,4 +61,4 @@ const TechListWrapper = () => {
   );
 };
 
-export default TechListWrapper;
+export default TechandTools;
