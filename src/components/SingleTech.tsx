@@ -1,8 +1,13 @@
-import { useState } from "react";
-import type { TechandToolsTypes } from "../consts";
+import { useState } from 'react';
 import { techStore } from '../store';
+import type { IconType } from 'react-icons';
 
-export const SingleTech = ({ logo: Logo, name }: TechandToolsTypes) => {
+interface props {
+  logo: IconType;
+  name: string;
+}
+
+export const SingleTech = ({ logo: Logo, name }: props) => {
   const [showName, setShowName] = useState(false);
   const activateTech = techStore((state) => state.activateTech);
 
@@ -26,9 +31,13 @@ export const SingleTech = ({ logo: Logo, name }: TechandToolsTypes) => {
       onClick={handleClick}
       style={{ transformOrigin: 'center' }}
     >
-      <Logo
-        className={`text-5xl ${showName && 'lg:text-green dark:lg:text-green'} text-green lg:text-gray dark:text-white`}
-      />
+      {Logo ? (
+        <Logo
+          className={`text-5xl ${showName && 'lg:text-green dark:lg:text-green'} text-green lg:text-gray dark:text-white`}
+        />
+      ) : (
+        <div className="text-5xl text-gray">No Logo</div>
+      )}
       {showName && (
         <p
           className={`text-green text-xs font-bold text-center hidden lg:block`}
