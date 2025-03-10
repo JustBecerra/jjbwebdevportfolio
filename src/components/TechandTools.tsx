@@ -52,7 +52,7 @@ const TechandTools = () => {
             transition: stop ? 'none' : 'transform 0.1s linear',
           }}
         >
-          {TechandToolsList.map((tt: TechandToolsTypes, index: number) => (
+          {items.map((tt: TechandToolsTypes, index: number) => (
             <SingleTech key={index} logo={tt.logo} name={tt.name} />
           ))}
         </div>
