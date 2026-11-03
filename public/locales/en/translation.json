@@ -1,40 +1,87 @@
 {
-  "navbar": {
+  "meta": {
+    "title": "Justo Becerra, full-stack developer",
+    "description": "Full-stack developer in La Plata, Argentina, building web and mobile products with React, Next.js, Node.js and React Native."
+  },
+  "nav": {
+    "label": "Main",
     "about": "About",
-    "projects": "Projects"
+    "experience": "Experience",
+    "work": "Work",
+    "contact": "Contact",
+    "language": "Language",
+    "theme": "Switch between light and dark theme",
+    "skip": "Skip to content"
   },
   "home": {
-    "title": "Developing <0>fresh and fast apps</0> with passion!",
-    "subtitle": "Software Developer and passionate problem-solver from La Plata, Argentina.",
-    "viewProjects": "View Projects",
-    "getInTouch": "Get in touch"
+    "status": "Open to full-time remote roles",
+    "lead": "Full-stack developer. I build web and mobile products end to end, from the first conversation with a client to the deploy.",
+    "routeLabel": "Based in La Plata, Argentina (UTC−3), working remotely with teams anywhere.",
+    "routeTo": "Your team",
+    "routeToSub": "Remote, anywhere",
+    "viewWork": "See my work",
+    "email": "Email me"
   },
   "about": {
-    "title": "About Me",
-    "description": "I'm an experienced Software Developer with a solid background in web development as well as some mobile development. It is my passion to build slick & well optimized websites and web apps.",
-    "description2": "I’m very much into gaming and learning to work with new technologies, always improving myself to stay on top of my field. Further, I like working out and do some cardio from time to time, I see it as a necessary balance to counter the sedentary life of a software developer."
+    "title": "About",
+    "p1": "I've been building for the web since 2022: React and Next.js on the front end, Node.js and Java on the back end, and React Native when the product needs to live on a phone.",
+    "p2": "I like owning a feature from requirements to production, and I'm most at home on logistics problems: shipments, tracking, getting things where they need to go. Day to day I work with Claude Code to move faster on new features and legacy code alike.",
+    "p3": "Outside work I play video games, try out new tools, and work out to balance all the hours at a desk.",
+    "photoAlt": "Portrait of Justo Becerra",
+    "skills": {
+      "frontend": "Frontend",
+      "backend": "Backend and data",
+      "mobile": "Mobile",
+      "workflow": "Tooling"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "fts": {
+      "role": "Full Stack Developer",
+      "dates": "Jun 2025 – Oct 2026",
+      "location": "Jericho, NY, US (remote)",
+      "summary": "Built a shareable web app that tracks shipments from warehouse to depot, maintained a large legacy app for internal and external users, and designed the server and database work that keeps its data current."
+    },
+    "vinculum": {
+      "role": "Full Stack Web Developer",
+      "dates": "Mar 2024 – Jun 2025",
+      "location": "Buenos Aires, Argentina",
+      "summary": "Built core web app features that lifted user engagement by 15%, gathered requirements directly with clients, designed database structures and APIs, and shipped with zero-downtime deploys."
+    },
+    "devlabs": {
+      "role": "Frontend & React Native Developer",
+      "dates": "Jun 2022 – Sep 2023",
+      "location": "Wilmington, DE, US (remote)",
+      "summary": "Shipped mobile and web features that raised user retention by 10%, and cut the critical error rate by 20% by debugging the app's API calls."
+    }
   },
   "projects": {
-    "tools": "Tools & Technologies I use",
-    "title": "Featured Personal Projects",
-    "professional": "Professional Work Excerpts",
-    "tech": "Technologies Used",
-    "repoLink": "Code",
-    "rick&mortyType": "Character Selection App",
-    "rick&mortyDescription": "App created to showcase and compare which characters share episodes together.",
-    "marvelseekerType": "Character Showcase",
-    "marvelseekerDescription": "App that showcases characters from the marvel universe. Information is retrieved from the Marvel public API.",
-    "quiztimeType": "Quiz App",
-    "quiztimeDescription": "Fun Quiz Time has the purpose of putting your history knowledge to the test. Most questions come from The Trivia API but you can also find user submitted questions.",
-    "sinergiavaloresType": "Business Website",
-    "sinergiavaloresDescription": "Website I designed as Freelance to display information and contact with an insurance company.",
-    "managementnegociosType": "Consulting Firm Website",
+    "clientTitle": "Client work",
+    "clientIntro": "Products I've built for businesses, from gyms to consultancies.",
+    "personalTitle": "Personal projects",
+    "personalIntro": "Smaller apps I built to try out APIs and stacks.",
+    "tech": "Technologies",
+    "visitSite": "Visit site",
+    "tryApp": "Open app",
+    "viewCode": "View code",
+    "screenshotAlt": "Screenshot of {{name}}",
+    "rick&mortyType": "Character comparison app",
+    "rick&mortyDescription": "Pick characters from Rick and Morty and see which episodes they share.",
+    "marvelseekerType": "Character browser",
+    "marvelseekerDescription": "Browse characters from the Marvel universe, with data from the Marvel public API.",
+    "quiztimeType": "Quiz app",
+    "quiztimeDescription": "A history quiz. Most questions come from The Trivia API, and users can submit their own.",
+    "sinergiavaloresType": "Business website",
+    "sinergiavaloresDescription": "Website for an insurance company, designed and built as a freelancer, with company information and a way to get in contact.",
+    "managementnegociosType": "Consulting firm website",
     "managementnegociosDescription": "Multi-page website for IMPRO Consulting Group, a management consultancy, presenting its team, clients, business units and contact channels.",
-    "clubbellType": "Gym Mobile App",
-    "clubbellDescription": "iOS and Android app for the Club Bell and D73 gyms. Trainers build day-by-day routines with exercise videos; members follow them and log their weights."
+    "clubbellType": "Gym mobile app",
+    "clubbellDescription": "iOS and Android app for the Club Bell and D73 gyms. Trainers build day-by-day routines with exercise videos; members follow them and log their weights.",
+    "clubbellNote": "Not in the app stores yet"
   },
   "footer": {
-    "getInTouch": "Get in touch",
-    "copyright": "All rights reserved."
+    "title": "Get in touch",
+    "intro": "Email is the quickest way to reach me."
   }
 }

@@ -1,40 +1,87 @@
 {
-  "navbar": {
+  "meta": {
+    "title": "Justo Becerra, desarrollador full-stack",
+    "description": "Desarrollador full-stack en La Plata, Argentina. Construyo productos web y móviles con React, Next.js, Node.js y React Native."
+  },
+  "nav": {
+    "label": "Principal",
     "about": "Sobre mí",
-    "projects": "Proyectos"
+    "experience": "Experiencia",
+    "work": "Proyectos",
+    "contact": "Contacto",
+    "language": "Idioma",
+    "theme": "Cambiar entre tema claro y oscuro",
+    "skip": "Saltar al contenido"
   },
   "home": {
-    "title": "Desarrollando <0>aplicaciones nuevas y rápidas</0> con pasión",
-    "subtitle": "Desarrollador de software y apasionado solucionador de problemas de La Plata, Argentina.",
-    "viewProjects": "Ver Proyectos",
-    "getInTouch": "Contactar"
+    "status": "Disponible para trabajo remoto full-time",
+    "lead": "Desarrollador full-stack. Construyo productos web y móviles de punta a punta, desde la primera charla con el cliente hasta el deploy.",
+    "routeLabel": "Desde La Plata, Argentina (UTC−3), trabajando de forma remota con equipos de cualquier lugar.",
+    "routeTo": "Tu equipo",
+    "routeToSub": "Remoto, donde sea",
+    "viewWork": "Ver mis proyectos",
+    "email": "Escribime"
   },
   "about": {
     "title": "Sobre mí",
-    "description": "Soy un desarrollador de software con una sólida experiencia en desarrollo web, así como en desarrollo móvil. Mi pasión es crear sitios web y aplicaciones web elegantes y optimizadas.",
-    "description2": "Me apasiona el mundo del gaming y el aprendizaje de nuevas tecnologías, siempre mejorando para mantenerme a la vanguardia. Además, me gusta hacer ejercicio y practicar cardio de vez en cuando, lo considero un balance necesario para contrarrestar la vida sedentaria de un desarrollador de software."
+    "p1": "Desarrollo para la web desde 2022: React y Next.js en el frontend, Node.js y Java en el backend, y React Native cuando el producto tiene que vivir en el teléfono.",
+    "p2": "Me gusta hacerme cargo de una funcionalidad desde los requisitos hasta producción, y donde más cómodo me siento es en problemas de logística: envíos, seguimiento, que las cosas lleguen a donde tienen que llegar. En el día a día trabajo con Claude Code para avanzar más rápido, tanto en funcionalidades nuevas como en código legacy.",
+    "p3": "Fuera del trabajo juego videojuegos, pruebo herramientas nuevas y entreno para compensar tantas horas frente a la compu.",
+    "photoAlt": "Retrato de Justo Becerra",
+    "skills": {
+      "frontend": "Frontend",
+      "backend": "Backend y datos",
+      "mobile": "Mobile",
+      "workflow": "Herramientas"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "fts": {
+      "role": "Full Stack Developer",
+      "dates": "jun 2025 – oct 2026",
+      "location": "Jericho, NY, EE. UU. (remoto)",
+      "summary": "Desarrollé una app web compartible para seguir envíos desde el depósito hasta destino, mantuve una aplicación legacy grande para usuarios internos y externos, y diseñé la interacción entre servidor y base de datos para que los datos estén siempre al día."
+    },
+    "vinculum": {
+      "role": "Full Stack Web Developer",
+      "dates": "mar 2024 – jun 2025",
+      "location": "Buenos Aires, Argentina",
+      "summary": "Desarrollé funcionalidades centrales de la app web que aumentaron el engagement de los usuarios un 15%, relevé requisitos directamente con clientes, diseñé estructuras de base de datos y APIs, e hice deploys sin downtime."
+    },
+    "devlabs": {
+      "role": "Frontend & React Native Developer",
+      "dates": "jun 2022 – sep 2023",
+      "location": "Wilmington, DE, EE. UU. (remoto)",
+      "summary": "Lancé funcionalidades móviles y web que mejoraron la retención de usuarios un 10%, y reduje un 20% la tasa de errores críticos depurando las llamadas de la app a la API."
+    }
   },
   "projects": {
-    "tools": "Herramientas & Tecnologías que uso",
-    "title": "Proyectos personales destacados",
-    "professional": "Proyectos profesionales destacados",
-    "tech": "Tecnologías usadas",
-    "repoLink": "Código",
-    "rick&mortyType": "App de selección de personajes",
-    "rick&mortyDescription": "App creada para mostrar y comparar qué personajes comparten episodios juntos.",
-    "marvelseekerType": "Mostrador de personajes",
-    "marvelseekerDescription": "App que muestra personajes de la universidad de Marvel. La información se obtiene de la API pública de Marvel.",
-    "quiztimeType": "App de cuestionarios",
-    "quiztimeDescription": "Fun Quiz Time tiene como propósito poner a prueba tu conocimiento de historia. La mayoría de las preguntas vienen de The Trivia API, pero también puedes encontrar preguntas enviadas por los usuarios.",
+    "clientTitle": "Trabajo para clientes",
+    "clientIntro": "Productos que construí para empresas, desde gimnasios hasta consultoras.",
+    "personalTitle": "Proyectos personales",
+    "personalIntro": "Apps más chicas que hice para probar APIs y tecnologías.",
+    "tech": "Tecnologías",
+    "visitSite": "Ver sitio",
+    "tryApp": "Abrir app",
+    "viewCode": "Ver código",
+    "screenshotAlt": "Captura de {{name}}",
+    "rick&mortyType": "App para comparar personajes",
+    "rick&mortyDescription": "Elegí personajes de Rick and Morty y mirá en qué episodios coinciden.",
+    "marvelseekerType": "Buscador de personajes",
+    "marvelseekerDescription": "Explorá personajes del universo Marvel, con datos de la API pública de Marvel.",
+    "quiztimeType": "App de preguntas",
+    "quiztimeDescription": "Un quiz de historia. La mayoría de las preguntas vienen de The Trivia API, y los usuarios pueden enviar las suyas.",
     "sinergiavaloresType": "Sitio web de una empresa",
-    "sinergiavaloresDescription": "Sitio web que diseñé como Freelance para mostrar información y contactar con una compañía de seguros.",
+    "sinergiavaloresDescription": "Sitio web para una compañía de seguros, diseñado y desarrollado como freelance, con información de la empresa y un canal de contacto.",
     "managementnegociosType": "Sitio web de una consultora",
     "managementnegociosDescription": "Sitio web multi-página para IMPRO Consulting Group, una consultora de gestión, que presenta su equipo, clientes, unidades de negocio y canales de contacto.",
     "clubbellType": "App móvil para gimnasios",
-    "clubbellDescription": "App para iOS y Android de los gimnasios Club Bell y D73. Los profesores arman rutinas día por día con videos de ejercicios; los socios las siguen y registran sus pesos."
+    "clubbellDescription": "App para iOS y Android de los gimnasios Club Bell y D73. Los profesores arman rutinas día por día con videos de ejercicios; los socios las siguen y registran sus pesos.",
+    "clubbellNote": "Todavía no está en las tiendas"
   },
   "footer": {
-    "getInTouch": "Contactar",
-    "copyright": "Todos los derechos reservados."
+    "title": "Contacto",
+    "intro": "La forma más rápida de contactarme es por email."
   }
 }

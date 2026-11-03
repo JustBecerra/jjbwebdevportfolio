@@ -1,52 +1,82 @@
 ---
-import { ChallengeInfo, ProfessionalInfo } from '../consts';
 import { t } from 'i18next';
-const { image, icon, name, type, description, appLink, repoLink, typeProject, currentTech } = Astro.props;
+import type { Project } from '../consts';
 
-const techLogos = typeProject === 'challenge'
-  ? ChallengeInfo.find((info) => info.name === name)?.listOfIcons
-  : ProfessionalInfo.find((info) => info.name === name)?.listOfIcons;
+interface Props {
+	project: Project;
+	variant: 'client' | 'personal';
+}
 
-const compareTech = techLogos?.some((element) => element.name === currentTech);
+const { project, variant } = Astro.props;
+const isClient = variant === 'client';
 ---
 
-<div
-  class={`w-[350px] lg:w-[400px] ${compareTech ? 'shadow-2xl shadow-green' : ''} h-[600px] rounded-md flex flex-col gap-8 bg-gray hover:scale-110 transition ease-in-out delay-150`}
+<article
+	class:list={[
+		isClient && 'grid gap-8 md:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] md:gap-12 md:items-center',
+	]}
 >
-  <div class="w-full h-fit">
-    <img src={image} width="400" height="100" alt="" class="rounded-t-md" />
-  </div>
-  <div class="w-full px-4 flex flex-col gap-4 h-[160px]">
-    <div class="flex w-full gap-4">
-      <img src={icon} width="40" height="40" alt="" />
-      <div>
-        <h3 class="text-white font-bold">{t(type)}</h3>
-        <h2 class="text-green font-bold">{name}</h2>
-      </div>
-    </div>
-    <p class="text-white ml-2 h-[120px]">{t(description)}</p>
-  </div>
-  <div class="flex flex-col items-center gap-4 h-[200px]">
-    <h3 class="text-green font-bold">{t('projects.tech')}</h3>
-    <div class="flex text-3xl lg:text-4xl gap-4 text-green">
-      {techLogos &&
-        techLogos.map(({ name, logo: Logo }, index) => (
-          <div id={name}>
-            <Logo width={24} height={24} size={24} />
-          </div>
-        ))}
-    </div>
-    <div class="mt-6 flex gap-8">
-      {appLink && (
-        <a href={appLink} target="_blank" rel="noopener noreferrer" class="bg-green px-4 py-2 rounded-full text-white">
-          Link
-        </a>
-      )}
-      {repoLink && (
-        <a href={repoLink} target="_blank" rel="noopener noreferrer" class="bg-white px-4 py-2 rounded-full border-2 border-green">
-          {t('projects.repoLink')}
-        </a>
-      )}
-    </div>
-  </div>
-</div>
+	<div class="overflow-hidden rounded-md border border-line bg-surface">
+		<img
+			src={project.imageURL}
+			alt={t('projects.screenshotAlt', { name: project.name })}
+			width="1920"
+			height="950"
+			loading="lazy"
+			decoding="async"
+			class="w-full h-auto aspect-[1920/950] object-cover object-top"
+		/>
+	</div>
+
+	<div class:list={[!isClient && 'mt-5']}>
+		<div class="flex items-center gap-3">
+			<img src={project.projectIcon} width="28" height="28" alt="" class="w-7 h-7 rounded object-contain" />
+			<p class="text-sm text-muted">{t(project.type)}</p>
+		</div>
+		<h3
+			class:list={[
+				'mt-3 font-bold tracking-tight',
+				isClient ? 'font-wide text-2xl sm:text-3xl' : 'text-xl',
+			]}
+		>
+			{project.name}
+		</h3>
+		<p class:list={['mt-3 leading-relaxed max-w-[36rem]', isClient ? 'text-lg' : 'text-base text-muted']}>
+			{t(project.description)}
+		</p>
+		<ul class="mt-4 flex flex-wrap gap-2" aria-label={t('projects.tech')}>
+			{
+				project.stack.map((tech) => (
+					<li class="text-sm px-2.5 py-1 rounded border border-line text-muted">{tech}</li>
+				))
+			}
+		</ul>
+		{
+			(project.appLink || project.repoLink || project.note) && (
+				<div class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 font-semibold">
+					{project.appLink && (
+						<a
+							href={project.appLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-link underline underline-offset-4 decoration-2 hover:decoration-signal"
+						>
+							{t(project.appLabel ?? 'projects.visitSite')}
+						</a>
+					)}
+					{project.repoLink && (
+						<a
+							href={project.repoLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-link underline underline-offset-4 decoration-2 hover:decoration-signal"
+						>
+							{t('projects.viewCode')}
+						</a>
+					)}
+					{project.note && <span class="font-normal text-sm text-muted">{t(project.note)}</span>}
+				</div>
+			)
+		}
+	</div>
+</article>
