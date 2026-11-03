@@ -27,7 +27,11 @@
     "quiztimeType": "Quiz App",
     "quiztimeDescription": "Fun Quiz Time has the purpose of putting your history knowledge to the test. Most questions come from The Trivia API but you can also find user submitted questions.",
     "sinergiavaloresType": "Business Website",
-    "sinergiavaloresDescription": "Website I designed as Freelance to display information and contact with an insurance company."
+    "sinergiavaloresDescription": "Website I designed as Freelance to display information and contact with an insurance company.",
+    "managementnegociosType": "Consulting Firm Website",
+    "managementnegociosDescription": "Multi-page website for IMPRO Consulting Group, a management consultancy, presenting its team, clients, business units and contact channels.",
+    "clubbellType": "Gym Mobile App",
+    "clubbellDescription": "iOS and Android app for the Club Bell and D73 gyms. Trainers build day-by-day routines with exercise videos; members follow them and log their weights."
   },
   "footer": {
     "getInTouch": "Get in touch",
