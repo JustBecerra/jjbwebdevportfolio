@@ -37,12 +37,16 @@ const compareTech = techLogos?.some((element) => element.name === currentTech);
         ))}
     </div>
     <div class="mt-6 flex gap-8">
-      <a href={appLink} target="_blank" rel="noopener noreferrer" class="bg-green px-4 py-2 rounded-full text-white">
-        Link
-      </a>
-      <a href={repoLink} target="_blank" rel="noopener noreferrer" class="bg-white px-4 py-2 rounded-full border-2 border-green">
-        {t('projects.repoLink')}
-      </a>
+      {appLink && (
+        <a href={appLink} target="_blank" rel="noopener noreferrer" class="bg-green px-4 py-2 rounded-full text-white">
+          Link
+        </a>
+      )}
+      {repoLink && (
+        <a href={repoLink} target="_blank" rel="noopener noreferrer" class="bg-white px-4 py-2 rounded-full border-2 border-green">
+          {t('projects.repoLink')}
+        </a>
+      )}
     </div>
   </div>
 </div>

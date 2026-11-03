@@ -10,7 +10,10 @@ import {
   SiTailwindcss,
   SiExpress,
   SiAstro,
+  SiExpo,
+  SiFirebase,
 } from 'react-icons/si';
+import { TbBrandReactNative } from 'react-icons/tb';
 import {
   IoLogoReact,
   IoLogoNodejs,
@@ -85,6 +88,60 @@ export const ProfessionalInfo = [
       },
     ],
     appLink: 'https://www.sinergiavalores.com/',
+    repoLink: '',
+  },
+  {
+    imageURL: '/managementnegociosSH.png',
+    projectIcon: '/managementnegociosIcon.svg',
+    name: 'Management Negocios',
+    type: 'projects.managementnegociosType',
+    description: 'projects.managementnegociosDescription',
+    listOfIcons: [
+      {
+        name: 'Typescript',
+        logo: BiLogoTypescript,
+      },
+      {
+        name: 'React',
+        logo: IoLogoReact,
+      },
+      {
+        name: 'Vite',
+        logo: SiVite,
+      },
+      {
+        name: 'Tailwind',
+        logo: SiTailwindcss,
+      },
+    ],
+    appLink: 'https://management-negocios.vercel.app',
+    repoLink: '',
+  },
+  {
+    imageURL: '/clubbellSH.png',
+    projectIcon: '/clubbellIcon.png',
+    name: 'D73 Club Bell',
+    type: 'projects.clubbellType',
+    description: 'projects.clubbellDescription',
+    listOfIcons: [
+      {
+        name: 'Typescript',
+        logo: BiLogoTypescript,
+      },
+      {
+        name: 'React Native',
+        logo: TbBrandReactNative,
+      },
+      {
+        name: 'Expo',
+        logo: SiExpo,
+      },
+      {
+        name: 'Firebase',
+        logo: SiFirebase,
+      },
+    ],
+    appLink: '',
     repoLink: '',
   },
 ];
