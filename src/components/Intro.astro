@@ -1,19 +1,57 @@
 ---
-import { Image } from 'astro:assets';
-import IntroText from './IntroText.astro';
-import BackgroundIntroPic from '../../public/BackgroundIntroPic.webp';
+import { t } from 'i18next';
+import { EMAIL } from '../consts';
 ---
 
-<section class="lg:relative w-full h-screen">
-	<div class="w-full lg:max-w-7xl lg:mx-auto mx-0 lg:h-full flex relative z-10">
-		<IntroText />
+<section class="max-w-page mx-auto px-4 sm:px-8 pt-16 pb-20 sm:pt-24 sm:pb-28">
+	<p class="inline-flex items-center gap-2 text-sm font-medium text-muted mb-8">
+		<span class="w-2 h-2 rounded-full bg-signal" aria-hidden="true"></span>
+		{t('home.status')}
+	</p>
+
+	<h1
+		class="font-wide font-extrabold leading-[0.92] tracking-tight text-[clamp(2.9rem,10.5vw,8.5rem)]"
+	>
+		Justo<br />Becerra
+	</h1>
+
+	<p class="mt-8 max-w-[38rem] text-xl sm:text-2xl leading-snug text-ink">
+		{t('home.lead')}
+	</p>
+
+	<!-- Route: where I work from to where the work is -->
+	<div class="mt-16" role="img" aria-label={t('home.routeLabel')}>
+		<div class="flex items-center gap-3">
+			<span class="shrink-0 w-5 h-5 rounded-full border-4 border-ink" aria-hidden="true"></span>
+			<span class="relative flex-1 h-[6px] bg-line overflow-hidden" aria-hidden="true">
+				<span class="route-line absolute inset-0 bg-signal"></span>
+			</span>
+			<span class="route-end shrink-0 w-5 h-5 rounded-full bg-signal ring-4 ring-ink" aria-hidden="true"></span>
+		</div>
+		<div class="mt-4 flex justify-between gap-6 text-base sm:text-lg">
+			<span>
+				<span class="block font-semibold">La Plata, AR</span>
+				<span class="text-muted">UTC−3</span>
+			</span>
+			<span class="text-right">
+				<span class="block font-semibold">{t('home.routeTo')}</span>
+				<span class="text-muted">{t('home.routeToSub')}</span>
+			</span>
+		</div>
 	</div>
 
-	<div class="relative lg:absolute top-20 right-0 w-full lg:w-1/2 h-[70%]">
-		<Image
-			class="w-full h-1/2 lg:h-full lg:rounded-l-full object-cover"
-			src={BackgroundIntroPic}
-			alt=""
-		/>
+	<div class="mt-12 flex flex-wrap gap-3">
+		<a
+			href="#work"
+			class="inline-flex items-center px-6 py-3 rounded bg-ink text-bg font-semibold hover:opacity-90 transition-opacity"
+		>
+			{t('home.viewWork')}
+		</a>
+		<a
+			href={`mailto:${EMAIL}`}
+			class="inline-flex items-center px-6 py-3 rounded border-2 border-ink font-semibold hover:bg-ink hover:text-bg transition-colors"
+		>
+			{t('home.email')}
+		</a>
 	</div>
 </section>

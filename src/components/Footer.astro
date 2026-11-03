@@ -1,24 +1,41 @@
 ---
-import { navlogos, type Navtypes } from '../consts';
 import { t } from 'i18next';
+import { EMAIL, contactLinks } from '../consts';
 ---
 
-<footer
-	class="w-full h-[200px] border-gray flex flex-col items-center justify-center gap-8"
->
-	<h1 class="text-green font-bold text-3xl text-nowrap lg:text-4xl">
-		{t('footer.getInTouch')}
-	</h1>
-	<div class="flex gap-6">
-		{
-			navlogos.map((nav: Navtypes) => (
-				<a href={nav.url} target="_blank" class="transparent">
-					<nav.logo className="hover:text-green text-2xl dark:hover:text-green text-gray dark:text-white" />
-				</a>
-			))
-		}
+<footer id="contact" class="border-t border-line">
+	<div class="max-w-page mx-auto px-4 sm:px-8 py-20 sm:py-28">
+		<h2 class="font-wide font-bold text-3xl sm:text-4xl tracking-tight">
+			{t('footer.title')}
+		</h2>
+		<p class="mt-3 text-lg text-muted max-w-[38rem]">{t('footer.intro')}</p>
+
+		<a
+			href={`mailto:${EMAIL}`}
+			class="mt-10 inline-block font-wide font-bold text-[clamp(1.25rem,4.4vw,2.75rem)] tracking-tight break-all underline decoration-signal decoration-[5px] underline-offset-[10px] hover:decoration-ink transition-colors"
+		>
+			{EMAIL}
+		</a>
+
+		<ul class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-lg font-semibold">
+			{
+				contactLinks.map((link) => (
+					<li>
+						<a
+							href={link.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-link underline underline-offset-4 decoration-2 hover:decoration-signal"
+						>
+							{link.name}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+
+		<p class="mt-20 text-sm text-muted">
+			© {new Date().getFullYear()} Justo Juan Becerra
+		</p>
 	</div>
-	<h2 class="text-gray dark:text-white text-center">
-		© {new Date().getFullYear()} Justo Juan Becerra. {t('footer.copyright')}
-	</h2>
 </footer>

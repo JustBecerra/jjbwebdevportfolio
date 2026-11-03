@@ -1,12 +1,41 @@
 ---
-import MyInformation from './MyInformation.astro';
+import { t } from 'i18next';
+import { Image } from 'astro:assets';
+import Portrait from '../../public/sonriente.webp';
+import { SkillGroups } from '../consts';
 ---
 
-<section class="w-full h-fit">
+<section id="about" class="border-t border-line">
 	<div
-		id="about"
-		class="w-full lg:max-w-7xl lg:mx-auto mx-0 lg:h-full flex flex-col items-center px-8 gap-12"
+		class="max-w-page mx-auto px-4 sm:px-8 py-20 sm:py-28 grid gap-12 md:grid-cols-[minmax(0,16rem)_minmax(0,1fr)] md:gap-16"
 	>
-		<MyInformation />
+		<Image
+			src={Portrait}
+			alt={t('about.photoAlt')}
+			widths={[320, 640]}
+			sizes="(min-width: 768px) 16rem, 60vw"
+			class="w-48 md:w-full aspect-square object-cover rounded-md"
+		/>
+		<div>
+			<h2 class="font-wide font-bold text-3xl sm:text-4xl tracking-tight">
+				{t('about.title')}
+			</h2>
+			<div class="mt-6 max-w-[38rem] space-y-5 text-lg leading-relaxed text-ink">
+				<p>{t('about.p1')}</p>
+				<p>{t('about.p2')}</p>
+				<p class="text-muted">{t('about.p3')}</p>
+			</div>
+
+			<dl class="mt-12 grid gap-x-10 gap-y-6 sm:grid-cols-2 max-w-[44rem]">
+				{
+					SkillGroups.map((group) => (
+						<div>
+							<dt class="font-semibold">{t(group.title)}</dt>
+							<dd class="mt-1 text-muted leading-relaxed">{group.items.join(', ')}</dd>
+						</div>
+					))
+				}
+			</dl>
+		</div>
 	</div>
 </section>

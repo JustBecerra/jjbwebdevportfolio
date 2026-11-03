@@ -1,20 +1,89 @@
-.lato-regular {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  src: url("/fonts/lato-regular") format("truetype");
-  font-style: normal;
+/* Palette: cool dock fog + navy ink, freight-label yellow as the one accent */
+:root {
+  --bg: #e8edf1;
+  --surface: #f6f8fa;
+  --ink: #13233a;
+  --muted: #4a5a6e;
+  --line: #c5d0da;
+  --link: #1f5a8a;
+  --signal: #f2b705;
+  --on-signal: #13233a;
+  color-scheme: light;
 }
 
-.lato-bold {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  src: url("/fonts/Lato-Bold.ttf") format("truetype");
-  font-style: normal;
+:root.dark {
+  --bg: #0e1a2b;
+  --surface: #15253b;
+  --ink: #e6ecf2;
+  --muted: #9fb0c3;
+  --line: #2a3d57;
+  --link: #8ec3ea;
+  --signal: #f2b705;
+  --on-signal: #13233a;
+  color-scheme: dark;
 }
 
-.playfair-display {
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  src: url("/fonts/PlayfairDisplay-Bold.ttf") format("truetype");
-  font-style: normal;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-variation-settings: 'wdth' 100;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* The wide cut is the label face: name, headings, project titles */
+.font-wide {
+  font-stretch: 125%;
+  font-variation-settings: 'wdth' 125;
+}
+
+/* Hero route line draws once on load */
+@keyframes draw-route {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes drop-pin {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.route-line {
+  transform-origin: left center;
+  animation: draw-route 1.4s cubic-bezier(0.65, 0, 0.35, 1) 0.3s both;
+}
+
+.route-end {
+  animation: drop-pin 0.4s ease-out 1.6s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .route-line,
+  .route-end {
+    animation: none;
+  }
 }

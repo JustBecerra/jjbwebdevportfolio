@@ -1,94 +1,44 @@
-import type { IconType } from "react-icons";
-import { FaLinkedin, FaWhatsapp, FaGolang } from "react-icons/fa6";
-import { IoMdMail } from "react-icons/io";
-import { FaGithub, FaGitAlt } from "react-icons/fa";
-import { BiLogoTypescript, BiLogoPostgresql } from "react-icons/bi";
-import { RiNextjsFill } from "react-icons/ri";
-import {
-  SiRedux,
-  SiVite,
-  SiTailwindcss,
-  SiExpress,
-  SiAstro,
-  SiExpo,
-  SiFirebase,
-} from 'react-icons/si';
-import { TbBrandReactNative } from 'react-icons/tb';
-import {
-  IoLogoReact,
-  IoLogoNodejs,
-  IoLogoJavascript,
-  IoLogoHtml5,
-  IoLogoCss3,
-  IoLogoFigma,
-} from 'react-icons/io5';
+export const EMAIL = 'justj.becerra@gmail.com';
 
-export type Navtypes = {
-  url: string;
-  logo: IconType;
-};
-
-export type TechandToolsTypes = {
-  logo: IconType;
-  name: string;
-};
-
-
-const message = "Hello, I'd like to talk to you!";
 const phoneNumber = '+542215909321';
-const encodedMessage = encodeURIComponent(message);
-const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+const whatsappMessage = encodeURIComponent("Hello, I'd like to talk to you!");
 
-export const navlogos: Navtypes[] = [
-  { url: 'mailto:justobecerra@gmail.com', logo: IoMdMail },
+export const contactLinks = [
   {
+    name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/justo-becerra-14868a1b4/',
-    logo: FaLinkedin,
   },
-  { url: 'https://github.com/JustBecerra', logo: FaGithub },
-  { url: whatsappURL, logo: FaWhatsapp },
-];
-
-export const scrollRoutes = [
+  { name: 'GitHub', url: 'https://github.com/JustBecerra' },
   {
-    name: 'About',
-  },
-  {
-    name: 'Projects',
+    name: 'WhatsApp',
+    url: `https://wa.me/${phoneNumber}?text=${whatsappMessage}`,
   },
 ];
 
-export const ProfessionalInfo = [
+export type Project = {
+  imageURL: string;
+  projectIcon: string;
+  name: string;
+  type: string;
+  description: string;
+  stack: string[];
+  appLink: string;
+  appLabel?: string;
+  repoLink: string;
+  note?: string;
+};
+
+export const ProfessionalInfo: Project[] = [
   {
-    imageURL: '/sinergiavaloresSH.png',
-    projectIcon: '/sinergiavaloresIcon.ico',
-    name: 'Sinergia Valores',
-    type: 'projects.sinergiavaloresType',
-    description: 'projects.sinergiavaloresDescription',
-    listOfIcons: [
-      {
-        name: 'Typescript',
-        logo: BiLogoTypescript,
-      },
-      {
-        name: 'CSS',
-        logo: IoLogoCss3,
-      },
-      {
-        name: 'HTML',
-        logo: IoLogoHtml5,
-      },
-      {
-        name: 'CSS',
-        logo: SiTailwindcss,
-      },
-      {
-        name: 'Astro',
-        logo: SiAstro,
-      },
-    ],
-    appLink: 'https://www.sinergiavalores.com/',
+    imageURL: '/clubbellSH.png',
+    projectIcon: '/clubbellIcon.png',
+    name: 'D73 Club Bell',
+    type: 'projects.clubbellType',
+    description: 'projects.clubbellDescription',
+    stack: ['React Native', 'Expo', 'TypeScript', 'Firebase'],
+    appLink: '',
     repoLink: '',
+    note: 'projects.clubbellNote',
   },
   {
     imageURL: '/managementnegociosSH.png',
@@ -96,88 +46,33 @@ export const ProfessionalInfo = [
     name: 'Management Negocios',
     type: 'projects.managementnegociosType',
     description: 'projects.managementnegociosDescription',
-    listOfIcons: [
-      {
-        name: 'Typescript',
-        logo: BiLogoTypescript,
-      },
-      {
-        name: 'React',
-        logo: IoLogoReact,
-      },
-      {
-        name: 'Vite',
-        logo: SiVite,
-      },
-      {
-        name: 'Tailwind',
-        logo: SiTailwindcss,
-      },
-    ],
+    stack: ['React', 'TypeScript', 'Vite', 'React Router', 'Tailwind'],
     appLink: 'https://management-negocios.vercel.app',
     repoLink: '',
   },
   {
-    imageURL: '/clubbellSH.png',
-    projectIcon: '/clubbellIcon.png',
-    name: 'D73 Club Bell',
-    type: 'projects.clubbellType',
-    description: 'projects.clubbellDescription',
-    listOfIcons: [
-      {
-        name: 'Typescript',
-        logo: BiLogoTypescript,
-      },
-      {
-        name: 'React Native',
-        logo: TbBrandReactNative,
-      },
-      {
-        name: 'Expo',
-        logo: SiExpo,
-      },
-      {
-        name: 'Firebase',
-        logo: SiFirebase,
-      },
-    ],
-    appLink: '',
+    imageURL: '/sinergiavaloresSH.png',
+    projectIcon: '/sinergiavaloresIcon.ico',
+    name: 'Sinergia Valores',
+    type: 'projects.sinergiavaloresType',
+    description: 'projects.sinergiavaloresDescription',
+    stack: ['Astro', 'TypeScript', 'Tailwind'],
+    appLink: 'https://www.sinergiavalores.com/',
     repoLink: '',
   },
 ];
 
-export const ChallengeInfo = [
+export const ChallengeInfo: Project[] = [
   {
-    imageURL: '/rick&mortySH.png',
-    projectIcon: '/rick&mortyicon.ico',
-    name: 'Rick & Morty App',
-    type: 'projects.rick&mortyType',
-    description: 'projects.rick&mortyDescription',
-    listOfIcons: [
-      {
-        name: 'Typescript',
-        logo: BiLogoTypescript,
-      },
-      {
-        name: 'CSS',
-        logo: IoLogoCss3,
-      },
-      {
-        name: 'HTML',
-        logo: IoLogoHtml5,
-      },
-      {
-        name: 'Next',
-        logo: RiNextjsFill,
-      },
-      {
-        name: 'Tailwind',
-        logo: SiTailwindcss,
-      },
-    ],
-    appLink:
-      'https://rick-and-morty-challenge-justbecerras-projects.vercel.app/',
-    repoLink: 'https://github.com/JustBecerra/rick-morty-challenge',
+    imageURL: '/quiztimeSH.png',
+    projectIcon: '/quiztimeicon.ico',
+    name: 'Fun Quiz Time!',
+    type: 'projects.quiztimeType',
+    description: 'projects.quiztimeDescription',
+    stack: ['Next.js', 'TypeScript', 'Tailwind', 'Go', 'PostgreSQL'],
+    appLink: 'https://fun-quiz-time.vercel.app/',
+    appLabel: 'projects.tryApp',
+    repoLink: 'https://github.com/JustBecerra/QuizTime',
   },
   {
     imageURL: '/marvelseekerSH.png',
@@ -185,139 +80,67 @@ export const ChallengeInfo = [
     name: 'Marvel Seeker',
     type: 'projects.marvelseekerType',
     description: 'projects.marvelseekerDescription',
-    listOfIcons: [
-      {
-        name: 'Typescript',
-        logo: BiLogoTypescript,
-      },
-      {
-        name: 'CSS',
-        logo: IoLogoCss3,
-      },
-      {
-        name: 'HTML',
-        logo: IoLogoHtml5,
-      },
-      {
-        name: 'Next',
-        logo: RiNextjsFill,
-      },
-      {
-        name: 'Redux',
-        logo: SiRedux,
-      },
-    ],
+    stack: ['Next.js', 'TypeScript', 'Redux'],
     appLink: 'https://marvel-seeker.vercel.app/',
+    appLabel: 'projects.tryApp',
     repoLink: 'https://github.com/JustBecerra/MarvelSeeker',
   },
   {
-    imageURL: '/quiztimeSH.png',
-    projectIcon: '/quiztimeicon.ico',
-    name: 'Fun Quiz Time!',
-    type: 'projects.quiztimeType',
-    description: 'projects.quiztimeDescription',
-    listOfIcons: [
-      {
-        name: 'Typescript',
-        logo: BiLogoTypescript,
-      },
-      {
-        name: 'Tailwind',
-        logo: SiTailwindcss,
-      },
-      {
-        name: 'CSS',
-        logo: IoLogoCss3,
-      },
-      {
-        name: 'HTML',
-        logo: IoLogoHtml5,
-      },
-      {
-        name: 'Next',
-        logo: RiNextjsFill,
-      },
-      {
-        name: 'Go',
-        logo: FaGolang,
-      },
-      {
-        name: 'PostgreSQL',
-        logo: BiLogoPostgresql,
-      },
-    ],
-    appLink: 'https://fun-quiz-time.vercel.app/',
-    repoLink: 'https://github.com/JustBecerra/QuizTime',
+    imageURL: '/rick&mortySH.png',
+    projectIcon: '/rick&mortyicon.ico',
+    name: 'Rick & Morty App',
+    type: 'projects.rick&mortyType',
+    description: 'projects.rick&mortyDescription',
+    stack: ['Next.js', 'TypeScript', 'Tailwind'],
+    appLink:
+      'https://rick-and-morty-challenge-justbecerras-projects.vercel.app/',
+    appLabel: 'projects.tryApp',
+    repoLink: 'https://github.com/JustBecerra/rick-morty-challenge',
   },
 ];
 
-export const TechandToolsList: TechandToolsTypes[] = [
+export const ExperienceInfo = [
   {
-    name: 'Astro',
-    logo: SiAstro,
+    role: 'experience.fts.role',
+    company: 'Forward Thinking Systems',
+    dates: 'experience.fts.dates',
+    location: 'experience.fts.location',
+    summary: 'experience.fts.summary',
+    stack: ['Next.js', 'React', 'TypeScript', 'Java', 'Spring Boot', 'Oracle DB'],
   },
   {
-    name: 'React',
-    logo: IoLogoReact,
+    role: 'experience.vinculum.role',
+    company: 'Vinculum',
+    dates: 'experience.vinculum.dates',
+    location: 'experience.vinculum.location',
+    summary: 'experience.vinculum.summary',
+    stack: ['Astro', 'React', 'TypeScript', 'Zustand', 'React Query', 'Node.js'],
   },
   {
-    name: 'Node',
-    logo: IoLogoNodejs,
+    role: 'experience.devlabs.role',
+    company: 'DevLabs',
+    dates: 'experience.devlabs.dates',
+    location: 'experience.devlabs.location',
+    summary: 'experience.devlabs.summary',
+    stack: ['React', 'React Native', 'TypeScript', 'Redux', 'React Query', 'Tailwind'],
+  },
+];
+
+export const SkillGroups = [
+  {
+    title: 'about.skills.frontend',
+    items: ['TypeScript', 'React', 'Next.js', 'Astro', 'Tailwind', 'Redux', 'Zustand', 'React Query'],
   },
   {
-    name: 'Javascript',
-    logo: IoLogoJavascript,
+    title: 'about.skills.backend',
+    items: ['Node.js', 'Express', 'Java', 'Spring Boot', 'Go', 'PostgreSQL', 'Oracle DB'],
   },
   {
-    name: 'Typescript',
-    logo: BiLogoTypescript,
+    title: 'about.skills.mobile',
+    items: ['React Native', 'Expo', 'Firebase'],
   },
   {
-    name: 'HTML',
-    logo: IoLogoHtml5,
-  },
-  {
-    name: 'CSS',
-    logo: IoLogoCss3,
-  },
-  {
-    name: 'Figma',
-    logo: IoLogoFigma,
-  },
-  {
-    name: 'Next',
-    logo: RiNextjsFill,
-  },
-  {
-    name: 'Git',
-    logo: FaGitAlt,
-  },
-  {
-    name: 'Github',
-    logo: FaGithub,
-  },
-  {
-    name: 'Redux',
-    logo: SiRedux,
-  },
-  {
-    name: 'Go',
-    logo: FaGolang,
-  },
-  {
-    name: 'PostgreSQL',
-    logo: BiLogoPostgresql,
-  },
-  {
-    name: 'Vite',
-    logo: SiVite,
-  },
-  {
-    name: 'Tailwind',
-    logo: SiTailwindcss,
-  },
-  {
-    name: 'Express',
-    logo: SiExpress,
+    title: 'about.skills.workflow',
+    items: ['Git', 'GitHub', 'Vite', 'Vercel', 'Railway', 'Claude Code'],
   },
 ];

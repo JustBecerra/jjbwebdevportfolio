@@ -1,17 +1,72 @@
 ---
-import DesktopNavbar from './DesktopNavbar.astro';
-import MobileNavbar from './MobileNavbar.astro';
+import { LanguageSelector } from 'astro-i18next/components';
+import i18next, { t } from 'i18next';
+
+const home = i18next.language === 'es' ? '/es/' : '/';
+
+const links = [
+	{ href: '#about', label: t('nav.about') },
+	{ href: '#experience', label: t('nav.experience') },
+	{ href: '#work', label: t('nav.work') },
+	{ href: '#contact', label: t('nav.contact') },
+];
 ---
 
-<header class="h-fit">
-	<div
-		class="max-w-7xl mx-auto px-4 bg-white dark:bg-blue shadow-lg sm:px-6 hidden lg:fixed lg:rounded-xl top-3 left-0 right-0 z-50 lg:block"
+<header
+	class="sticky top-0 z-50 backdrop-blur border-b border-line"
+	style="background-color: color-mix(in srgb, var(--bg) 88%, transparent)"
+>
+	<nav
+		class="max-w-page mx-auto px-4 sm:px-8 h-16 flex items-center justify-between gap-4"
+		aria-label={t('nav.label')}
 	>
-		<DesktopNavbar />
-	</div>
-	<div
-		class="max-w-7xl mx-auto px-4 sm:px-6 block bg-white dark:bg-blue shadow-lg lg:hidden"
-	>
-		<MobileNavbar />
-	</div>
+		<a href={home} class="font-wide font-bold text-lg tracking-tight">
+			Justo Becerra
+		</a>
+		<ul class="hidden md:flex items-center gap-7 text-[0.95rem]">
+			{
+				links.map((link) => (
+					<li>
+						<a href={link.href} class="text-muted hover:text-ink transition-colors">
+							{link.label}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+		<div class="flex items-center gap-3">
+			<LanguageSelector
+				showFlag={false}
+				languageMapping={{ en: 'EN', es: 'ES' }}
+				class="lang-select bg-transparent text-sm font-semibold text-ink border border-line rounded px-2 py-1 cursor-pointer"
+				aria-label={t('nav.language')}
+			/>
+			<button
+				id="theme-toggle"
+				type="button"
+				class="w-9 h-9 grid place-items-center rounded border border-line text-ink hover:border-ink transition-colors"
+				aria-label={t('nav.theme')}
+			>
+				<svg class="hidden dark:block w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+					<circle cx="12" cy="12" r="4"></circle>
+					<path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+				</svg>
+				<svg class="block dark:hidden w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+					<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+				</svg>
+			</button>
+		</div>
+	</nav>
 </header>
+
+<script>
+	const toggle = document.getElementById('theme-toggle');
+	toggle?.addEventListener('click', () => {
+		const dark = document.documentElement.classList.toggle('dark');
+		try {
+			localStorage.setItem('theme', dark ? 'dark' : 'light');
+		} catch (e) {
+			console.warn('theme: storage unavailable, choice not saved', e);
+		}
+	});
+</script>
