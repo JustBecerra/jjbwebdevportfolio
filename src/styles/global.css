@@ -42,6 +42,12 @@ body {
   border-radius: 2px;
 }
 
+/* Native option popups don't inherit a transparent select background */
+.lang-select option {
+  background-color: var(--surface);
+  color: var(--ink);
+}
+
 /* The wide cut is the label face: name, headings, project titles */
 .font-wide {
   font-stretch: 125%;
